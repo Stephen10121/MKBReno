@@ -22,11 +22,11 @@ COPY --from=install /app/node_modules ./node_modules
 # Copy built SvelteKit output
 COPY --from=build /app/build ./build
 COPY --from=build /app/.svelte-kit ./.svelte-kit
-COPY --from=build /app/.output ./.output
+# COPY --from=build /app/.output ./.output
 COPY package.json .
 
 ENV NODE_ENV=production
 EXPOSE 3000
 
 # SvelteKit Bun adapter entrypoint
-CMD ["bun", ".output/server/index.js"]
+CMD ["bun", ".build/server/index.js"]
