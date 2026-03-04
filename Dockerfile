@@ -29,4 +29,4 @@ ENV NODE_ENV=production
 EXPOSE 3000
 
 # SvelteKit Bun adapter entrypoint
-CMD ["bun", "build/server/index.js"]
+CMD ["bun", "build/index.js"]
