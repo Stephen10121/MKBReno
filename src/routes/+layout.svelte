@@ -3,6 +3,11 @@
 	import logo from '$lib/assets/MKBLOGO.png';
     import { afterNavigate } from '$app/navigation';
     import { browser } from '$app/environment';
+    import Navbar from '@/components/Navbar.svelte';
+    import { page } from '$app/state';
+    import FloatingContactButton from '@/components/FloatingContactButton.svelte';
+    import ContactModal from '@/components/ContactModal.svelte';
+	import { Toaster } from "$lib/components/ui/sonner/index.js";
 
 	let { children } = $props();
 
@@ -11,6 +16,8 @@
 			window.scrollTo({ top: 0, behavior: 'smooth' });
 		}
 	});
+
+	let isContactModalOpen = $state(false);
 </script>
 
 <svelte:head>
@@ -20,6 +27,11 @@
 	<link rel="icon" href={logo} />
 </svelte:head>
 
+<Toaster theme="light" />
+
 <main class="min-h-screen bg-white">
+	<Navbar pathname={page.url.pathname} />
 	{@render children()}
+	<FloatingContactButton click={() => isContactModalOpen = true} />
+	<ContactModal bind:isContactModalOpen={isContactModalOpen} />
 </main>
