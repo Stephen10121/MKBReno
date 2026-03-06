@@ -9,7 +9,11 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			"@/*": "./src/lib/*"
-		}
+		},
+		csrf: {
+			// checkOrigin: false,
+			trustedOrigins: ["http://localhost:5173", "https://mkbreno.com", "https://www.mkbreno.com"]
+		},
 	}
 };
 
