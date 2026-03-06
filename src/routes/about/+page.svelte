@@ -3,6 +3,16 @@
     import { isContactModalOpen } from "@/store";
 </script>
 
+<svelte:head>
+	<title>MKB Renovations - About MKB Renovations</title>
+	<meta name="title" content="MKB Renovations - About MKB Renovations" />
+	<meta property="og:url" content="https://www.mkbreno.com/about" />
+	<meta property="og:title" content="MKB Renovations - About MKB Renovations" />
+    
+	<meta property="twitter:url" content="https://www.mkbreno.com/about" />
+	<meta property="twitter:title" content="MKB Renovations - About MKB Renovations" />
+</svelte:head>
+
 <div>
     <section class="relative bg-linear-to-br from-green-800 via-green-700 to-primary text-white py-16 md:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
