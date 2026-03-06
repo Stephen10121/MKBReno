@@ -9,6 +9,7 @@
     import ContactModal from '@/components/ContactModal.svelte';
 	import { Toaster } from "$lib/components/ui/sonner/index.js";
     import Footer from '@/components/Footer.svelte';
+    import { isContactModalOpen } from '@/store';
 
 	let { children } = $props();
 
@@ -18,7 +19,6 @@
 		}
 	});
 
-	let isContactModalOpen = $state(false);
 </script>
 
 <svelte:head>
@@ -33,7 +33,7 @@
 <main class="min-h-screen bg-white">
 	<Navbar pathname={page.url.pathname} />
 	{@render children()}
-	<FloatingContactButton click={() => isContactModalOpen = true} />
-	<ContactModal bind:isContactModalOpen={isContactModalOpen} />
+	<FloatingContactButton click={() => isContactModalOpen.set(true)} />
+	<ContactModal />
 	<Footer />
 </main>

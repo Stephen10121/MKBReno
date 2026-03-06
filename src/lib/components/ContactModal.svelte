@@ -1,7 +1,6 @@
 <script lang="ts">
+    import { isContactModalOpen } from "@/store";
     import { toast } from "svelte-sonner";
-
-    let { isContactModalOpen = $bindable() }: { isContactModalOpen: boolean } = $props();
 
     let name = $state("");
     let phone = $state("");
@@ -23,18 +22,18 @@
         email = "";
         message = "";
 
-        isContactModalOpen = false;
+        isContactModalOpen.set(false);
     }
 </script>
 
-{#if isContactModalOpen}
+{#if $isContactModalOpen}
     <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
         <div class="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl font-bold text-gray-900">Contact Us</h2>
                     <button
-                        onclick={() => isContactModalOpen = false}
+                        onclick={() => isContactModalOpen.set(false)}
                         class="text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
                         title="Close Form"
                     >
@@ -97,7 +96,7 @@
                     <div class="flex space-x-3 pt-4">
                         <button
                             type="button"
-                            onclick={() => isContactModalOpen = false}
+                            onclick={() => isContactModalOpen.set(false)}
                             class="flex-1 bg-white hover:bg-gray-50 text-text font-medium py-3 px-6 rounded-lg border border-secondary transition-colors duration-200 cursor-pointer"
                         >
                             Cancel
