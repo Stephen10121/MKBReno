@@ -23,23 +23,17 @@
 
 <svelte:head>
 	<meta name="description" content="MKB Renovations - Professional kitchen and bathroom renovation services in Minnehaha, Washington. Quality craftsmanship and exceptional design." />
-    <title>MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA</title>
 	<link rel="icon" type="image/png" href="/img/MKBLOGO.png" />
 	<link rel="icon" href={logo} />
 	<!-- Primary Meta Tags -->
-	<meta name="title" content="MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA" />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://www.mkbreno.com/" />
-	<meta property="og:title" content="MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA" />
 	<meta property="og:description" content="MKB Renovations - Professional kitchen and bathroom renovation services in Minnehaha, Washington. Quality craftsmanship and exceptional design." />
 	<meta property="og:image" content="https://www.mkbreno.com/hero.jpg" />
 
 	<!-- X (Twitter) -->
 	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://www.mkbreno.com/" />
-	<meta property="twitter:title" content="MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA" />
 	<meta property="twitter:description" content="MKB Renovations - Professional kitchen and bathroom renovation services in Minnehaha, Washington. Quality craftsmanship and exceptional design." />
 	<meta property="twitter:image" content="https://www.mkbreno.com/hero.jpg" />
 </svelte:head>
