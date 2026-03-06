@@ -8,6 +8,6 @@
 <div>
     <Hero />
     <Services />
-    <ImageCarousel />
+    <!-- <ImageCarousel /> -->
     <Reviews />
 </div>
