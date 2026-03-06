@@ -1,2 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import Footer from "@/components/homePage/Footer.svelte";
+    import Hero from "@/components/homePage/Hero.svelte";
+    import ImageCarousel from "@/components/homePage/ImageCarousel.svelte";
+    import Reviews from "@/components/homePage/Reviews.svelte";
+    import Services from "@/components/homePage/Services.svelte";
+
+</script>
+<div>
+    <Hero />
+    <Services />
+    <ImageCarousel />
+    <Reviews />
+    <Footer />
+</div>

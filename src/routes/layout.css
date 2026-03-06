@@ -123,6 +123,15 @@
 *,*::before,*::after {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  font-style: normal;
+  font-display: swap;
 }
 
 #root {
