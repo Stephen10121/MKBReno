@@ -4,13 +4,13 @@
 </script>
 
 <svelte:head>
-	<title>MKB Renovations - About MKB Renovations</title>
-	<meta name="title" content="MKB Renovations - About MKB Renovations" />
+	<title>About MKB Renovations - MKB Renovations</title>
+	<meta name="title" content="About MKB Renovations - MKB Renovations" />
 	<meta property="og:url" content="https://www.mkbreno.com/about" />
-	<meta property="og:title" content="MKB Renovations - About MKB Renovations" />
+	<meta property="og:title" content="About MKB Renovations - MKB Renovations" />
     
 	<meta property="twitter:url" content="https://www.mkbreno.com/about" />
-	<meta property="twitter:title" content="MKB Renovations - About MKB Renovations" />
+	<meta property="twitter:title" content="About MKB Renovations - MKB Renovations" />
 </svelte:head>
 
 <div>

@@ -17,13 +17,13 @@
 </script>
 
 <svelte:head>
-	<title>MKB Renovations - Projects</title>
-	<meta name="title" content="MKB Renovations - Projects" />
+	<title>Projects - MKB Renovations</title>
+	<meta name="title" content="Projects - MKB Renovations" />
 	<meta property="og:url" content="https://www.mkbreno.com/projects" />
-	<meta property="og:title" content="MKB Renovations - Projects" />
+	<meta property="og:title" content="Projects - MKB Renovations" />
     
 	<meta property="twitter:url" content="https://www.mkbreno.com/projects" />
-	<meta property="twitter:title" content="MKB Renovations - Projects" />
+	<meta property="twitter:title" content="Projects - MKB Renovations" />
 </svelte:head>
 
 <div>
