@@ -8,6 +8,7 @@
     import FloatingContactButton from '@/components/FloatingContactButton.svelte';
     import ContactModal from '@/components/ContactModal.svelte';
 	import { Toaster } from "$lib/components/ui/sonner/index.js";
+    import Footer from '@/components/Footer.svelte';
 
 	let { children } = $props();
 
@@ -34,4 +35,5 @@
 	{@render children()}
 	<FloatingContactButton click={() => isContactModalOpen = true} />
 	<ContactModal bind:isContactModalOpen={isContactModalOpen} />
+	<Footer />
 </main>
