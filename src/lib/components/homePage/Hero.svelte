@@ -29,7 +29,7 @@
             Where quality craftsmanship meets exceptional design.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onclick={scrollToServices} class="bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-colors duration-200 text-lg px-8 py-4">
+            <button onclick={scrollToServices} class="bg-primary hover:bg-primary-dark text-white font-medium rounded-lg transition-colors duration-200 text-lg px-8 py-4 cursor-pointer">
             Our Services
             </button>
             <a href="tel:+13609917646" class="text-text font-medium rounded-lg border transition-colors duration-200 text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20">

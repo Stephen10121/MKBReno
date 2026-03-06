@@ -151,33 +151,33 @@
             <div class="flex justify-center space-x-4 mb-8">
                 <button
                     onclick={() => handleFilterChange('all')}
-                    class={`px-6 py-2 rounded-full font-medium transition-colors duration-200 ${
+                    class="px-6 py-2 rounded-full font-medium transition-colors duration-200 cursor-pointer {
                     filter === 'all' 
                         ? 'bg-primary text-white' 
                         : 'bg-gray-200 text-gray-700 hover:bg-secondary'
-                    }`}
+                    }"
                 >
                     All Projects ({images.length})
                 </button>
 
                 <button
                     onclick={() => handleFilterChange('kitchen')}
-                    class={`px-6 py-2 rounded-full font-medium transition-colors duration-200 ${
+                    class="px-6 py-2 rounded-full font-medium transition-colors duration-200 cursor-pointer {
                     filter === 'kitchen' 
                         ? 'bg-primary text-white' 
                         : 'bg-gray-200 text-gray-700 hover:bg-secondary'
-                    }`}
+                    }"
                 >
                     Kitchens ({images.filter(img => img.category === 'Kitchen').length})
                 </button>
 
                 <button
                     onclick={() => handleFilterChange('bathroom')}
-                    class={`px-6 py-2 rounded-full font-medium transition-colors duration-200 ${
+                    class="px-6 py-2 rounded-full font-medium transition-colors duration-200 cursor-pointer {
                     filter === 'bathroom' 
                         ? 'bg-primary text-white' 
                         : 'bg-gray-200 text-gray-700 hover:bg-secondary'
-                    }`}
+                    }"
                 >
                     Bathrooms ({images.filter(img => img.category === 'Bathroom').length})
                 </button>
@@ -198,7 +198,7 @@
                 <button
                     title="Previous Picture"
                     onclick={goToPrevious}
-                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200"
+                    class="cursor-pointer absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200"
                 >
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M15 19l-7-7 7-7" />
@@ -208,7 +208,7 @@
                 <button
                     title="Next Picture"
                     onclick={goToNext}
-                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200"
+                    class="cursor-pointer absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200"
                 >
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M9 5l7 7-7 7" />
@@ -221,7 +221,7 @@
                     <button
                         title="See More"
                         onclick={() => goToSlide(index)}
-                        class="w-3 h-3 rounded-full transition-all duration-200 {
+                        class="w-3 h-3 rounded-full transition-all duration-200 cursor-pointer {
                             index === currentImageIndex 
                             ? 'bg-primary scale-110' 
                             : 'bg-gray-300 hover:bg-gray-400'
@@ -234,7 +234,7 @@
                 {#each filteredImages as image, index (`athumbImage${index}`)}
                     <button
                         onclick={() => goToSlide(index)}
-                        class="shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all duration-200 {
+                        class="shrink-0 w-20 h-20 rounded-lg overflow-hidden transition-all duration-200 cursor-pointer {
                             index === currentImageIndex 
                             ? 'ring-4 ring-primary scale-110' 
                             : 'opacity-70 hover:opacity-100'
