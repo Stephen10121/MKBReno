@@ -1,5 +1,5 @@
 <script lang="ts">
-    import logo from "$lib/assets/MKBLOGO.png";
+    import logo from "$lib/assets/mkblogo2.png";
 
     const navigation = [
         { name: 'Home', href: '/' },
@@ -14,13 +14,13 @@
 
 <nav class="bg-white shadow-lg sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-4">
+        <div class="flex justify-between items-center">
             <div class="flex items-center">
                 <a href="/" class="flex items-center space-x-3">
                     <img 
                         src={logo} 
                         alt="MKB Renovations" 
-                        class="h-12 w-auto"
+                        class="h-30 w-auto"
                     />
                     <span class="text-2xl font-bold text-gray-900">MKB Renovations</span>
                 </a>

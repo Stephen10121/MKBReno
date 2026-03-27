@@ -5,13 +5,13 @@
     const services = [
         {
             title: "Kitchen Renovations",
-            description: "Transform your kitchen into a culinary masterpiece with custom cabinetry, modern appliances, and beautiful countertops.",
+            description: "Transform your kitchen into a culinary masterpiece with custom/semi-custom cabinetry, modern appliances, and beautiful countertops.",
             features: ["Custom Cabinetry", "Countertop Installation", "Appliance Integration", "Lighting Design"],
             icon: KitchenServicesIcon
         },
         {
             title: "Bathroom Remodeling",
-            description: "Create a spa-like retreat with modern fixtures, elegant tile work, and luxurious finishes that enhance comfort and value.",
+            description: "Create a comfortable, inviting bathroom with clean modern fixtures, simple tile work, and quality finishes that feel good to use and add lasting value.",
             features: ["Custom Tile Work", "Modern Fixtures", "Shower & Tub Installation", "Vanity Design"],
             icon: BathroomServicesIcon
         }

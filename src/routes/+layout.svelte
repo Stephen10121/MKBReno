@@ -1,22 +1,20 @@
 <script lang="ts">
-	import './layout.css';
-	import logo from '$lib/assets/MKBLOGO.png';
-    import { afterNavigate } from '$app/navigation';
-    import { browser } from '$app/environment';
-    import Navbar from '@/components/Navbar.svelte';
-    import { page } from '$app/state';
     import FloatingContactButton from '@/components/FloatingContactButton.svelte';
-    import ContactModal from '@/components/ContactModal.svelte';
 	import { Toaster } from "$lib/components/ui/sonner/index.js";
+    import ContactModal from '@/components/ContactModal.svelte';
     import Footer from '@/components/Footer.svelte';
+    import { afterNavigate } from '$app/navigation';
+    import Navbar from '@/components/Navbar.svelte';
     import { isContactModalOpen } from '@/store';
+	import logo from '$lib/assets/MKBLOGO.png';
+    import { browser } from '$app/environment';
+    import { page } from '$app/state';
+	import './layout.css';
 
 	let { children } = $props();
 
 	afterNavigate(() => {
-		if (browser) {
-			window.scrollTo({ top: 0, behavior: 'smooth' });
-		}
+		if (browser) window.scrollTo({ top: 0, behavior: 'smooth' });
 	});
 
 </script>
