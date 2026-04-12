@@ -12,8 +12,17 @@ const config = {
 		},
 		csrf: {
 			// checkOrigin: false,
-			trustedOrigins: ["http://localhost:5173", "https://mkbreno.com", "https://www.mkbreno.com"]
+			trustedOrigins: [
+				"http://localhost:5173",
+				"https://mkbreno.com",
+				"https://www.mkbreno.com",
+				"https://mkb-renovations.com/",
+				"https://www.mkb-renovations.com/"
+			]
 		},
+		experimental: {
+			remoteFunctions: true
+		}
 	}
 };
 

@@ -12,7 +12,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: #57b752;
+  --primary: #196c3b;
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: #aecfa5;
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -134,12 +134,12 @@
   font-display: swap;
 }
 
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 .logo {
   height: 6em;
@@ -176,3 +176,5 @@
 .read-the-docs {
   color: #888;
 }
+
+html { scroll-behavior: smooth; }

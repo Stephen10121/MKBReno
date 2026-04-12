@@ -1,4 +1,4 @@
-name: Docker Build MKBReno frontend
+name: Docker Build MKBReno App
 
 on:
     push:

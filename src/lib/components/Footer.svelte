@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Logo from "$lib/assets/MKBLOGO.png";
+    import Logo from "$lib/assets/mkblogo2.png";
 </script>
 
 <footer class="bg-gray-900 text-white">

@@ -1,33 +1,38 @@
 <script lang="ts">
     import { isContactModalOpen } from "@/store";
     import { toast } from "svelte-sonner";
+    import { contactForm } from "../../routes/contact.remote";
 
     let name = $state("");
     let phone = $state("");
     let email = $state("");
     let message = $state("");
 
-    function handleSubmit(e: Event) {
+    async function handleSubmit(e: Event) {
         e.preventDefault();
-        // Here you would typically send the form data to your backend
-        console.log('Form submitted:', {
-            name,
-            phone,
-            email,
-            message
-        });
-        toast.success("Thank you for your message", { description: "We will contact you soon!" });
-        name = "";
-        phone = "";
-        email = "";
-        message = "";
+        
+        try {
+            await contactForm({
+                name,
+                phone,
+                email,
+                message
+            });
+            toast.success("Thank you for your message", { description: "We will contact you soon!" });
+            name = "";
+            phone = "";
+            email = "";
+            message = "";
 
-        isContactModalOpen.set(false);
+            isContactModalOpen.set(false);
+        } catch(err) {
+            toast.error("Failed to send message.", { description: "Please make sure your inputs are valid." });
+        }
     }
 </script>
 
 {#if $isContactModalOpen}
-    <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4" style="z-index: 201;">
         <div class="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-6">

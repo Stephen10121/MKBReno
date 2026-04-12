@@ -1,15 +1,14 @@
 <script lang="ts">
-	import './layout.css';
-	import logo from '$lib/assets/MKBLOGO.png';
-    import { afterNavigate } from '$app/navigation';
-    import { browser } from '$app/environment';
-    import Navbar from '@/components/Navbar.svelte';
-    import { page } from '$app/state';
     import FloatingContactButton from '@/components/FloatingContactButton.svelte';
-    import ContactModal from '@/components/ContactModal.svelte';
 	import { Toaster } from "$lib/components/ui/sonner/index.js";
+    import ContactModal from '@/components/ContactModal.svelte';
     import Footer from '@/components/Footer.svelte';
-    import { isContactModalOpen } from '@/store';
+    import { afterNavigate } from '$app/navigation';
+    import Header from '@/components/Header.svelte';
+    import { isContactModalOpen, topHeaderStatus } from '@/store';
+	import logo from '$lib/assets/mkblogo2.png';
+    import { browser } from '$app/environment';
+	import './layout.css';
 
 	let { children } = $props();
 
@@ -41,9 +40,13 @@
 <Toaster theme="light" />
 
 <main class="min-h-screen bg-white">
-	<Navbar pathname={page.url.pathname} />
+	<!-- <Navbar pathname={page.url.pathname} /> -->
+	<Header />
+	<div class="h-20 bg-[#181a1d]"></div>
 	{@render children()}
-	<FloatingContactButton click={() => isContactModalOpen.set(true)} />
+	{#if $topHeaderStatus === "hide"}
+		<FloatingContactButton click={() => isContactModalOpen.set(true)} />
+	{/if}
 	<ContactModal />
 	<Footer />
 </main>
