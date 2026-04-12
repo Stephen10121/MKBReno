@@ -6,12 +6,12 @@
     const navItems = [
         { label: "Home", path: "/" },
         { label: "About", path: "/about" },
-        // { label: "Projects", path: "/projects" }
-        { label: "Additions", path: "/additions" },
-        { label: "ADUs", path: "/adus" },
-        { label: "Kitchen/Bathrooms", path: "/kitchen-bathrooms" },
-        { label: "Full House", path: "/full-house" },
-        { label: "Contact", path: "/contact" },
+        { label: "Projects", path: "/projects" }
+        // { label: "Additions", path: "/additions" },
+        // { label: "ADUs", path: "/adus" },
+        // { label: "Kitchen/Bathrooms", path: "/kitchen-bathrooms" },
+        // { label: "Full House", path: "/full-house" },
+        // { label: "Contact", path: "/contact" },
     ];
 
     let location = $derived($page.url);

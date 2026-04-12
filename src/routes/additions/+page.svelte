@@ -1,60 +1,41 @@
 <script lang="ts">
-    // import ImageCarousel from "@/components/homePage/ImageCarousel.svelte";
-    import Services from "@/components/homePage/Services.svelte";
-    import Reviews from "@/components/homePage/Reviews.svelte";
-    import HeroImage from "$lib/assets/housefront.png";
-    import { isContactModalOpen } from "@/store";
+	const processSteps = [
+		{ title: "Consultation & Planning", desc: "Every project begins with a detailed consultation. As an experienced home addition contractor in Clark County, WA, we take the time to understand your vision, budget, and goals. We evaluate your property and help determine the best approach for your home expansion or ADU build." },
+		{ title: "Design & Layout", desc: "We create custom designs that blend perfectly with your existing structure. Our home addition design services ensure your new space matches your home's layout, rooflines, and style while maximizing functionality." },
+		{ title: "Permits & Approvals", desc: "We handle all permitting to ensure your project meets Washington state building codes and local Clark County requirements. This includes submitting plans and coordinating approvals so your home addition project stays on track." },
+		{ title: "Site Preparation", desc: "Our team prepares the site by clearing, leveling, and completing any demolition needed. We protect your existing structure while preparing for construction." },
+		{ title: "Foundation Construction", desc: "A solid foundation is key to any successful home addition or ADU construction. We excavate, pour footings, and build foundation walls or slabs designed for long-term durability." },
+		{ title: "Framing", desc: "We construct the structural framework, including floors, walls, and roof systems. This is where your custom home addition begins to take shape." },
+		{ title: "Exterior & Roofing", desc: "We install roofing, siding, windows, and doors to fully enclose the structure. Our goal is to seamlessly match your existing home's exterior for a cohesive look." },
+		{ title: "Electrical, Plumbing & HVAC", desc: "We install all essential systems, including electrical wiring, plumbing, and heating/cooling. Every system is built to meet code and ensure long-term performance." },
+		{ title: "Insulation & Drywall", desc: "We install high-quality insulation for energy efficiency, followed by drywall installation and finishing to create smooth interior walls." },
+		{ title: "Interior Finishes", desc: "From flooring and cabinets to trim and paint, this phase brings your home renovation or addition to life with clean, professional finishes." },
+		{ title: "Fixtures & Final Details", desc: "We install lighting, plumbing fixtures, and final details to complete your space with precision and care." },
+		{ title: "Final Inspection & Walkthrough", desc: "We complete all inspections and walk you through your finished project to ensure everything meets your expectations and local building standards." },
+	];
+
+	const whyChoose = [
+		"Licensed, bonded, and insured",
+		"Experienced general contractor in Clark County, WA",
+		"Specializing in home additions, ADUs, and full home remodeling",
+		"Efficient build timelines (construction often completed in ~90 days)",
+		"5-star rated on Google",
+	];
+
+	const serviceAreas = ["Vancouver, WA", "Battle Ground, WA", "Camas, WA", "Washougal, WA", "Clark County, WA"];
 </script>
 
 <svelte:head>
-	<meta property="twitter:title" content="MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA" />
-	<meta property="og:title" content="MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA" />
-	<meta name="title" content="MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA" />
-    <title>MKB Renovations - Kitchen & Bathroom Renovations | Minnehaha, WA</title>
-	<meta property="twitter:url" content="https://www.mkbreno.com/" />
-	<meta property="og:url" content="https://www.mkbreno.com/" />
+	<meta property="twitter:title" content="Home Additions in Clark County, WA | ADUs & Remodeling | MKB Renovations" />
+	<meta property="og:title" content="Home Additions in Clark County, WA | ADUs & Remodeling | MKB Renovations" />
+	<meta name="title" content="Home Additions in Clark County, WA | ADUs & Remodeling | MKB Renovations" />
+    <title>Home Additions in Clark County, WA | ADUs & Remodeling | MKB Renovations</title>
+	<meta property="twitter:url" content="https://www.mkb-renovations.com/additions" />
+	<meta property="og:url" content="https://www.mkb-renovations.com/additions" />
+
+	<link rel="canonical" href="https://www.mkb-renovations.com/additions" />
+
+	<meta name="description" content="Licensed contractor specializing in home additions, ADUs, and remodeling in Clark County, WA. Design to finish construction with high-quality craftsmanship." />
+	<meta property="og:description" content="Licensed contractor specializing in home additions, ADUs, and remodeling in Clark County, WA. Design to finish construction with high-quality craftsmanship." />
+	<meta property="twitter:description" content="Licensed contractor specializing in home additions, ADUs, and remodeling in Clark County, WA. Design to finish construction with high-quality craftsmanship." />
 </svelte:head>
-
-<div>
-    <section class="relative min-h-screen flex items-center">
-        <div 
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('{HeroImage}')"
-    ></div>
-      <!-- <img
-        src={HeroImage}
-        alt="Beautiful kitchen renovation by MKB Renovations"
-        class="absolute inset-0 w-full h-full object-cover"
-        width="1920px"
-        height="1080px"
-      /> -->
-      <div class="absolute inset-0 bg-[#1c2126]/65"></div>
-
-      <div class="relative z-10 container mx-auto px-4 py-20">
-        <div class="max-w-2xl">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-display text-primary-foreground leading-tight mb-6">
-            Vancouver & Portland's Trusted{" "}
-            <span class="text-primary">Renovation Team</span>
-          </h1>
-          <p class="text-lg md:text-xl text-primary-foreground/85 mb-8 font-body leading-relaxed">
-            Expert kitchen, bathroom, and whole-house renovations. Where quality
-            craftsmanship meets exceptional design — from concept to completion.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <button onclick={() => isContactModalOpen.set(true)} class="text-white bg-[#196c3b] font-semibold uppercase tracking-wider rounded-sm transition-all duration-200; text-base px-8 py-3.5 text-center">
-              Get Your FREE Estimate
-            </button>
-            <a
-              href="tel:+13609917646"
-              class="px-8 py-3.5 text-base font-semibold text-primary-foreground border-2 border-primary-foreground/30 rounded-sm text-center hover:border-primary-foreground/60 transition-colors"
-            >
-              Call (360) 991-7646
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <Services />
-    <!-- <ImageCarousel /> -->
-    <Reviews />
-</div>
