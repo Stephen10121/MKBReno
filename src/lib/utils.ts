@@ -98,3 +98,18 @@ export const reviews = [
     project: "Tile Work"
   }
 ];
+
+export function loadScript(url: string) {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = url;
+    
+    // Triggered when the resource is fully loaded and ready
+    script.onload = () => resolve(script);
+    
+    // Triggered if the resource fails to load
+    script.onerror = () => reject(new Error(`Script load error for ${url}`));
+
+    document.head.appendChild(script);
+  });
+}

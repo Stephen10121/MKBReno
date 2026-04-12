@@ -1,34 +1,9 @@
 <script lang="ts">
-    import { isContactModalOpen } from "@/store";
+    import { isContactModalOpen, turnstileWidgetId } from "@/store";
     import { toast } from "svelte-sonner";
     import { contactForm } from "../../routes/contact.remote";
 
-    let name = $state("");
-    let phone = $state("");
-    let email = $state("");
-    let message = $state("");
-
-    async function handleSubmit(e: Event) {
-        e.preventDefault();
-        
-        try {
-            await contactForm({
-                name,
-                phone,
-                email,
-                message
-            });
-            toast.success("Thank you for your message", { description: "We will contact you soon!" });
-            name = "";
-            phone = "";
-            email = "";
-            message = "";
-
-            isContactModalOpen.set(false);
-        } catch(err) {
-            toast.error("Failed to send message.", { description: "Please make sure your inputs are valid." });
-        }
-    }
+    let { turnstileSiteToken }: { turnstileSiteToken: string } = $props();
 </script>
 
 {#if $isContactModalOpen}
@@ -48,54 +23,87 @@
                     </button>
                 </div>
 
-                <div class="space-y-4">
+                <form {...contactForm.enhance(async ({ submit, form }) => {
+                    let savingChanges = toast.loading("Saving Changes.", { duration: Number.POSITIVE_INFINITY });
+                    try {
+                        await submit();
+                        form.reset();
+                        toast.dismiss(savingChanges);
+
+                        //@ts-ignore
+                        turnstile.reset($turnstileWidgetId);
+
+                        if (!contactForm.fields.allIssues()) {
+                            toast.success("Thank you for your message.", { description: "We will contact you soon!" });
+                            isContactModalOpen.set(false);
+                        }
+                    } catch (err) {
+                        console.log(err);
+                        toast.dismiss(savingChanges);
+                        toast.error("Failed to send message.", { description: "Please try again later." });
+                    }
+                })} class="space-y-4">
+                    <div>
+                        {#each contactForm.fields.turnStileToken.issues() as issue}
+                            <p class="text-red-500 text-sm">{issue.message}</p>
+                        {/each}
+                    </div>
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
                         <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            bind:value={name}
+                            {...contactForm.fields.name.as("text")}
                             required
+                            id="name"
                             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                         />
+                        {#each contactForm.fields.name.issues() as issue}
+                            <p class="text-red-500 text-sm">{issue.message}</p>
+                        {/each}
                     </div>
 
                     <div>
                         <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
                         <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            bind:value={phone}
+                            {...contactForm.fields.phone.as("text")}
                             required
+                            id="phone"
                             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                         />
+                        {#each contactForm.fields.phone.issues() as issue}
+                            <p class="text-red-500 text-sm">{issue.message}</p>
+                        {/each}
                     </div>
 
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
                         <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            bind:value={email}
+                            {...contactForm.fields.email.as("email")}
                             required
+                            id="email"
                             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                         />
+                        {#each contactForm.fields.email.issues() as issue}
+                            <p class="text-red-500 text-sm">{issue.message}</p>
+                        {/each}
                     </div>
 
                     <div>
                         <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
                         <textarea
-                            id="message"
-                            name="message"
-                            bind:value={message}
+                            {...contactForm.fields.message.as("text")}
                             required
+                            id="message"
                             rows={4}
                             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                             placeholder="Tell us about your project..."
                         ></textarea>
+                        {#each contactForm.fields.message.issues() as issue}
+                            <p class="text-red-500 text-sm">{issue.message}</p>
+                        {/each}
+
+                        {#if turnstileSiteToken}
+                            <input {...contactForm.fields.turnStileToken.as("hidden", turnstileSiteToken)} />
+                        {/if}
                     </div>
 
                     <div class="flex space-x-3 pt-4">
@@ -110,12 +118,11 @@
                         <button
                             type="submit"
                             class="flex-1 bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 cursor-pointer"
-                            onclick={handleSubmit}
                         >
                             Send Message
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
