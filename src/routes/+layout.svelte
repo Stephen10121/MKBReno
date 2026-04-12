@@ -13,7 +13,9 @@
 	let { children } = $props();
 
 	afterNavigate(() => {
-		if (browser) window.scrollTo({ top: 0, behavior: 'smooth' });
+		if (browser) {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
 	});
 
 </script>

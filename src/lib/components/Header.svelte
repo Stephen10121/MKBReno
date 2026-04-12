@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { navigating } from "$app/state";
     import NavigationBar from "./NavigationBar.svelte";
     import TopHeader from "./TopHeader.svelte";
 
@@ -34,6 +35,11 @@
 
 <header class="{cl} {transition ? "transition2" : ""}">
     <TopHeader />
+    <div class="h-full">
+        {#if navigating.complete !== null}
+            <div class="loader"></div>
+        {/if}
+    </div>
     <NavigationBar {linkClicked} {cl} />
 </header>
 
@@ -48,7 +54,7 @@
         width: 100%;
         z-index: 200;
         display: grid;
-        grid-template-rows: 80px 80px;
+        grid-template-rows: 80px 4px 80px;
     }
 
     header.transition2 {
@@ -61,5 +67,21 @@
 
     header.show {
         transform: translate(0, 0);
+    }
+
+    /* HTML: <div class="loader"></div> */
+    .loader {
+        height: 100%;
+        width: 100%;
+        --c:no-repeat linear-gradient(#196c3b 0 0);
+        background: var(--c),var(--c),#ffffff;
+        background-size: 60% 100%;
+        animation: l16 3s infinite;
+    }
+
+    @keyframes l16 {
+        0%   {background-position:-150% 0,-150% 0}
+        66%  {background-position: 250% 0,-150% 0}
+        100% {background-position: 250% 0, 250% 0}
     }
 </style>

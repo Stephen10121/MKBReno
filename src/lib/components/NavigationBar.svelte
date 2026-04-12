@@ -18,7 +18,7 @@
     let location = $derived($page.url);
 </script>
 
-<div class="w-full h-full p-1">
+<div class="w-full h-full pl-1 pr-2 pb-1">
     <nav class="bg-white/60 ring-slate-500/50 {$mobileMenuOpen ? "ring" : ""} md:ring md:block backdrop-blur-sm rounded-md" style="transition: background-color 0.25s linear 0.5s;">
         <div class="flex items-center justify-between px-2">
             <ul class="hidden md:flex items-center gap-1">
