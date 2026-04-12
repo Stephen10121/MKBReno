@@ -9,7 +9,7 @@
 
     function scrolling(event: any) {
         let currentScrollPos = event.target.scrollingElement.scrollTop;
-        if(currentScrollPos > 1) {
+        if(currentScrollPos > 80) {
             if (currentScrollPos < prevScrollPos) {
                 topHeaderStatus.set("show");
             } else {
