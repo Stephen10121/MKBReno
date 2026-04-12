@@ -1,21 +1,24 @@
 <script lang="ts">
-    import { isContactModalOpen, mobileMenuOpen } from "@/store";
-    import { fade, slide } from "svelte/transition";
+    import { isContactModalOpen, mobileMenuOpen, topHeaderStatus } from "@/store";
+    import { slide } from "svelte/transition";
     import { page } from "$app/stores";
 
     const navItems = [
         { label: "Home", path: "/" },
         { label: "About", path: "/about" },
-        { label: "Additions", path: "/additions" },
-        { label: "ADUs", path: "/adus" },
-        { label: "Kitchen/Bathrooms", path: "/kitchen-bathrooms" },
-        { label: "Full House", path: "/full-house" },
-        { label: "Contact", path: "/contact" },
+        { label: "Projects", path: "/projects" }
+        // { label: "Additions", path: "/additions" },
+        // { label: "ADUs", path: "/adus" },
+        // { label: "Kitchen/Bathrooms", path: "/kitchen-bathrooms" },
+        // { label: "Full House", path: "/full-house" },
+        // { label: "Contact", path: "/contact" },
     ];
 
-    let { linkClicked, cl }: { linkClicked: () => unknown, cl: "show" | "hide" } = $props();
-
     let location = $derived($page.url);
+
+    function linkClicked() {
+        topHeaderStatus.set("show");
+    }
 </script>
 
 <div class="w-full h-full pl-1 pr-2 pb-1">
@@ -31,8 +34,7 @@
                 {/each}
             </ul>
     
-            {#if cl === "hide"}
-            <div transition:fade={{delay:200, duration:250}} class="hidden lg:flex items-center gap-4">
+            <div class="hidden lg:flex items-center gap-4">
                 <button onclick={() => isContactModalOpen.set(true)} class="bg-[#196c3b] text-white hidden md:flex cursor-pointer px-6 py-2.5 text-sm tracking-wider rounded-sm transition-all duration-200">
                     Get FREE Estimate
                 </button>
@@ -43,7 +45,6 @@
                     Call (360) 991-7646
                 </a>
             </div>
-            {/if}
         </div>
     
         {#if $mobileMenuOpen}

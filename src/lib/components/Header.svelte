@@ -1,46 +1,37 @@
 <script lang="ts">
-    import { navigating } from "$app/state";
     import NavigationBar from "./NavigationBar.svelte";
     import TopHeader from "./TopHeader.svelte";
+    import { topHeaderStatus } from "@/store";
+    import { navigating } from "$app/state";
 
-    let cl = $state<"show" | "hide">("show");
     let transition = $state(true);
     let prevScrollPos = $state(0);
 
     function scrolling(event: any) {
         let currentScrollPos = event.target.scrollingElement.scrollTop;
-        if(currentScrollPos > 150) {
+        if(currentScrollPos > 1) {
             if (currentScrollPos < prevScrollPos) {
-                cl = "show";
+                topHeaderStatus.set("show");
             } else {
-                cl = "hide";
+                topHeaderStatus.set("hide");
             }
         } else {
-            cl = "show";
+            topHeaderStatus.set("show");
         }
         prevScrollPos = currentScrollPos;
-    }
-
-    // If a new link is clicked, the header will appear automatically with no transition.
-    function linkClicked() {
-        transition = false;
-        cl = "show";
-        setTimeout(() => {
-            transition = true;
-        }, 100);
     }
 </script>
 
 <svelte:window on:scroll={scrolling} />
 
-<header class="{cl} {transition ? "transition2" : ""}">
+<header class="{$topHeaderStatus} {transition ? "transition2" : ""}">
     <TopHeader />
     <div class="h-full">
         {#if navigating.complete !== null}
             <div class="loader"></div>
         {/if}
     </div>
-    <NavigationBar {linkClicked} {cl} />
+    <NavigationBar />
 </header>
 
 

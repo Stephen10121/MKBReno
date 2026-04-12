@@ -5,8 +5,8 @@
     import Footer from '@/components/Footer.svelte';
     import { afterNavigate } from '$app/navigation';
     import Header from '@/components/Header.svelte';
-    import { isContactModalOpen } from '@/store';
-	import logo from '$lib/assets/MKBLOGO.png';
+    import { isContactModalOpen, topHeaderStatus } from '@/store';
+	import logo from '$lib/assets/mkblogo2.png';
     import { browser } from '$app/environment';
 	import './layout.css';
 
@@ -42,9 +42,11 @@
 <main class="min-h-screen bg-white">
 	<!-- <Navbar pathname={page.url.pathname} /> -->
 	<Header />
-	<div class="h-20"></div>
+	<div class="h-20 bg-[#181a1d]"></div>
 	{@render children()}
-	<FloatingContactButton click={() => isContactModalOpen.set(true)} />
+	{#if $topHeaderStatus === "hide"}
+		<FloatingContactButton click={() => isContactModalOpen.set(true)} />
+	{/if}
 	<ContactModal />
 	<Footer />
 </main>

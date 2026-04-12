@@ -1,6 +1,6 @@
 <script lang="ts">
+    import { fly } from "svelte/transition";
     import { onMount } from "svelte";
-    import { fly, slide } from "svelte/transition";
 
     let currentIndex = $state(0);
 
@@ -11,7 +11,7 @@
     } = $props();
 
     // svelte-ignore state_referenced_locally
-        let messages2 = $state(messages.map((message) => {
+    let messages2 = $state(messages.map((message) => {
         return {
             text: message,
             show: false
@@ -49,7 +49,7 @@
     {#each messages2 as message (`amessage${message.text}`)}
         {#if message.show} 
             <p
-                class="text-sm text-top-bar-foreground/80 whitespace-nowrap text-cente"
+                class="text-sm text-top-bar-foreground/80 whitespace-nowrap text-center"
                 in:fly={{
                     duration: 800,
                     y: 20,
