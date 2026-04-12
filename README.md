@@ -1,7 +1,7 @@
 Add a header above the navigation header. This header will dissapear when you scroll down. But will reappear when you slightly scroll up.
 New Header:
     - Logo
-    - Testimonials fading out.
+    - Testimonials sliding from the vertical axis
     - Phone Number
     - FREE Estimate Button
 

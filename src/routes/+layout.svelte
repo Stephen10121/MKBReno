@@ -4,11 +4,10 @@
     import ContactModal from '@/components/ContactModal.svelte';
     import Footer from '@/components/Footer.svelte';
     import { afterNavigate } from '$app/navigation';
-    import Navbar from '@/components/Navbar.svelte';
+    import Header from '@/components/Header.svelte';
     import { isContactModalOpen } from '@/store';
 	import logo from '$lib/assets/MKBLOGO.png';
     import { browser } from '$app/environment';
-    import { page } from '$app/state';
 	import './layout.css';
 
 	let { children } = $props();
@@ -39,7 +38,9 @@
 <Toaster theme="light" />
 
 <main class="min-h-screen bg-white">
-	<Navbar pathname={page.url.pathname} />
+	<!-- <Navbar pathname={page.url.pathname} /> -->
+	<Header />
+	<div class="h-20"></div>
 	{@render children()}
 	<FloatingContactButton click={() => isContactModalOpen.set(true)} />
 	<ContactModal />
