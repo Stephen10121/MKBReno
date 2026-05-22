@@ -37,7 +37,7 @@
                     "{reviews[currentReview].text}"
                 </blockquote>
                 <div class="flex items-center justify-center space-x-4">
-                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                    <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
                         <span class="text-primary font-semibold text-lg">
                             {reviews[currentReview].name.charAt(0)}
                         </span>

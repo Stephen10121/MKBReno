@@ -32,7 +32,7 @@
             {#each services as service, index (`aservice${index}`)}
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div class="flex items-center mb-6">
-                        <div class="bg-secondary p-3 rounded-lg text-primary mr-4">
+                        <div class="bg-primary/20 p-3 rounded-lg text-primary mr-4">
                             <service.icon />
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900">{service.title}</h3>
