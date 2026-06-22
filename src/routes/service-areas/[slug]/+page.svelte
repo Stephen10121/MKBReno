@@ -400,11 +400,12 @@
 				>
 					<span class="material-symbols-outlined">call</span> CALL (360) 991-7646
 				</a>
-				<button
-					class="h-14 border border-primary bg-surface-white px-10 font-label-caps text-label-caps font-bold text-primary transition-all hover:bg-primary hover:text-on-primary"
+				<a
+					href="/contact"
+					class="flex h-14 items-center justify-center border border-primary bg-surface-white px-10 font-label-caps text-label-caps font-bold text-primary transition-all hover:bg-primary hover:text-on-primary"
 				>
 					REQUEST ESTIMATE ONLINE
-				</button>
+				</a>
 			</div>
 		</div>
 	</section>

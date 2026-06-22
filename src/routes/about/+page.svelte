@@ -199,7 +199,7 @@
 			</p>
 			<div class="flex flex-col justify-center gap-4 md:flex-row">
 				<a
-					class="flex items-center rounded-lg bg-surface-white px-10 py-5 text-label-caps font-bold text-primary transition-colors hover:bg-primary-fixed-dim"
+					class="flex items-center justify-center rounded-lg bg-surface-white px-10 py-5 text-label-caps font-bold text-primary transition-colors hover:bg-primary-fixed-dim"
 					href="/contact"
 				>
 					Get A Free Estimate

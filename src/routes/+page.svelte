@@ -68,7 +68,7 @@
 				<div class="flex flex-col gap-4 sm:flex-row">
 					<a
 						href="/contact"
-						class="rounded-lg bg-primary px-8 py-4 text-lg font-bold text-on-primary transition-all hover:bg-primary-container active:scale-95"
+						class="rounded-lg bg-primary px-8 py-4 text-center text-lg font-bold text-on-primary transition-all hover:bg-primary-container active:scale-95"
 					>
 						Get Your FREE Estimate
 					</a>
@@ -229,7 +229,7 @@
 							fixtures.
 						</p>
 						<a
-							href="/services"
+							href="/services#bathroom"
 							class="rounded-lg bg-white px-6 py-2 text-sm font-bold text-primary"
 							>Learn More</a
 						>

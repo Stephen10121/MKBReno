@@ -217,16 +217,18 @@
 				craftsmanship that lasts a lifetime.
 			</p>
 			<div class="flex flex-col items-center justify-center gap-4 md:flex-row">
-				<button
+				<a
+					href="/contact"
 					class="w-full rounded-full bg-primary px-10 py-4 font-label-caps text-label-caps text-on-primary transition-all hover:-translate-y-1 hover:shadow-xl md:w-auto"
 				>
 					Book Your Free Estimate
-				</button>
-				<button
+				</a>
+				<a
+					href="/testimonials"
 					class="w-full rounded-full border border-primary px-10 py-4 font-label-caps text-label-caps text-primary transition-all hover:bg-primary/5 md:w-auto"
 				>
 					View More Reviews
-				</button>
+				</a>
 			</div>
 		</div>
 	</section>
