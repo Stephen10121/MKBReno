@@ -7,19 +7,10 @@
 </script>
 
 <svelte:head>
-	<meta
-		property="twitter:title"
-		content="MKB Renovations - Kitchen & Bathroom Renovations | Pacific Northwest"
-	/>
-	<meta
-		property="og:title"
-		content="MKB Renovations - Kitchen & Bathroom Renovations | Pacific Northwest"
-	/>
-	<meta
-		name="title"
-		content="MKB Renovations - Kitchen & Bathroom Renovations | Pacific Northwest"
-	/>
-	<title>MKB Renovations - Kitchen & Bathroom Renovations | Pacific Northwest</title>
+	<meta property="twitter:title" content="MKB Renovations | Kitchen & Bath Remodeling" />
+	<meta property="og:title" content="MKB Renovations | Kitchen & Bath Remodeling" />
+	<meta name="title" content="MKB Renovations | Kitchen & Bath Remodeling" />
+	<title>MKB Renovations | Kitchen & Bath Remodeling</title>
 	<meta property="twitter:url" content="https://www.mkb-renovations.com/" />
 	<meta property="og:url" content="https://www.mkb-renovations.com/" />
 
