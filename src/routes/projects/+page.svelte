@@ -1,94 +1,233 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
-
-    function handleViewRecentWork() {
-        goto('/');
-        // Small delay to ensure the page has loaded before scrolling
-        setTimeout(() => {
-            const recentWorkSection = document.querySelector('[data-section="recent-work"]');
-            if (recentWorkSection) {
-                recentWorkSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        }, 100);
-    }
+	import renovationIMG from '@/assets/housereno.webp';
+	import vancouverbathroomreno from '@/assets/vancouverbathroomreno.jpeg';
+	import richfieldbathroomreno from '@/assets/richfieldbathroom.jpg';
+	import richfieldbathroom2 from '@/assets/richfieldbathroom2.jpg';
+	import kitchenrenoandAddition from '@/assets/kitchenreno.jpeg';
+	import bathroom2 from '@/assets/bathroom2.jpeg';
+	import kitchenhero from '@/assets/Hero.webp';
 </script>
 
 <svelte:head>
 	<title>Projects - MKB Renovations</title>
 	<meta name="title" content="Projects - MKB Renovations" />
-	<meta property="og:url" content="https://www.mkbreno.com/projects" />
+	<meta property="og:url" content="https://www.mkb-renovations.com/projects" />
 	<meta property="og:title" content="Projects - MKB Renovations" />
-    
-	<meta property="twitter:url" content="https://www.mkbreno.com/projects" />
+
+	<meta property="twitter:url" content="https://www.mkb-renovations.com/projects" />
 	<meta property="twitter:title" content="Projects - MKB Renovations" />
 </svelte:head>
 
-<div>
-    <section class="relative bg-linear-to-br from-green-800 via-green-700 to-primary text-white py-16 md:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                    Our Projects
-                </h1>
-                <p class="text-xl md:text-2xl leading-relaxed">
-                    Explore our portfolio of completed kitchen and bathroom renovations
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 md:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="max-w-3xl mx-auto">
-                <div class="bg-gray-100 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8">
-                    <svg class="w-12 h-12 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                </div>
-                
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">
-                    Project Gallery Coming Soon
-                </h2>
-                
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                    We're currently building our project portfolio to showcase our best work. 
-                    In the meantime, you can see some of our recent projects in the gallery 
-                    on our home page, or contact us directly to discuss your renovation needs.
-                </p>
-
-                <div class="grid md:grid-cols-2 gap-6 text-left mb-8">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Kitchen Renovations</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Custom cabinet installations</li>
-                            <li>• Countertop upgrades</li>
-                            <li>• Modern appliance integration</li>
-                            <li>• Lighting and electrical work</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Bathroom Remodels</h3>
-                        <ul class="space-y-2 text-gray-600">
-                            <li>• Shower and tub installations</li>
-                            <li>• Custom tile work</li>
-                            <li>• Vanity and fixture upgrades</li>
-                            <li>• Plumbing and electrical updates</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick={handleViewRecentWork} class="bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 cursor-pointer">
-                        View Recent Work
-                    </button>
-                    <a href="tel:+13609917646" class="bg-white hover:bg-gray-50 text-text font-medium py-3 px-6 rounded-lg border border-secondary transition-colors duration-200 cursor-pointer">
-                        Call (360) 991-7646
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+<main class="pt-20">
+	<!-- Hero Section -->
+	<section class="relative flex h-100 items-center justify-center overflow-hidden">
+		<img
+			alt="Luxury Home Project"
+			class="absolute inset-0 h-full w-full object-cover"
+			src={renovationIMG}
+		/>
+		<div class="absolute inset-0 bg-on-background/40"></div>
+		<div class="relative z-10 px-grid-margin text-center">
+			<h1 class="mb-4 font-display-lg text-display-lg text-white md:text-display-lg">
+				Our Featured Projects
+			</h1>
+			<p class="mx-auto max-w-2xl font-body-lg text-body-lg text-surface-bright">
+				Discover how we transform Pacific Northwest homes with precision, transparency, and
+				award-winning design.
+			</p>
+		</div>
+	</section>
+	<!-- Project Gallery Section -->
+	<section
+		class="mx-auto max-w-7xl px-grid-margin py-section-gap-mobile md:py-section-gap-desktop"
+	>
+		<!-- Bento-style Grid -->
+		<div class="grid grid-cols-1 gap-grid-gutter md:grid-cols-12">
+			<!-- Project 1: Modern Salmon Creek Kitchen (Large) -->
+			<div
+				class="group project-card relative overflow-hidden rounded-xl border border-gray-subtle bg-surface-white md:col-span-8"
+			>
+				<div class="aspect-video overflow-hidden">
+					<img
+						alt="Modern Kitchen"
+						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src={kitchenhero}
+					/>
+				</div>
+				<div class="p-8">
+					<div class="mb-4 flex items-start justify-between">
+						<div>
+							<span
+								class="mb-2 inline-block rounded-full bg-primary-container/10 px-3 py-1 text-[10px] font-bold tracking-wider text-primary uppercase"
+								>Kitchen Remodel</span
+							>
+							<h3 class="font-headline-md text-headline-md text-on-surface">
+								Modern Salmon Creek Kitchen
+							</h3>
+						</div>
+					</div>
+					<p class="font-body-md text-body-md text-secondary">
+						A complete culinary transformation featuring custom cabinetry, integrated
+						smart appliances, and a stunning waterfall marble island. PNW inspired
+						wooden accents.
+					</p>
+				</div>
+			</div>
+			<!-- Project 2: West Linn Primary Bath (Small) -->
+			<div
+				class="group project-card relative overflow-hidden rounded-xl border border-gray-subtle bg-surface-white md:col-span-4"
+			>
+				<div class="aspect-square overflow-hidden">
+					<img
+						alt="Luxury Bathroom Renovation"
+						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src={vancouverbathroomreno}
+					/>
+				</div>
+				<div class="p-6">
+					<span
+						class="mb-2 inline-block rounded-full bg-primary-container/10 px-3 py-1 text-[10px] font-bold tracking-wider text-primary uppercase"
+						>Bathroom</span
+					>
+					<h3 class="mb-2 font-headline-md text-headline-md text-xl text-on-surface">
+						Washougal Primary Bath
+					</h3>
+					<p class="font-body-md text-body-md text-sm text-secondary">
+						Spa-inspired retreat with heated floors and a seamless tile integration into
+						the bathtub.
+					</p>
+				</div>
+			</div>
+			<!-- Project 3: Camas Whole-Home Refresh (Small) -->
+			<div
+				class="group project-card relative overflow-hidden rounded-xl border border-gray-subtle bg-surface-white md:col-span-4"
+			>
+				<div class="aspect-square overflow-hidden">
+					<img
+						alt="Clark County Bathroom"
+						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src={richfieldbathroom2}
+					/>
+				</div>
+				<div class="p-6">
+					<span
+						class="mb-2 inline-block rounded-full bg-primary-container/10 px-3 py-1 text-[10px] font-bold tracking-wider text-primary uppercase"
+						>Bathroom</span
+					>
+					<h3 class="mb-2 font-headline-md text-headline-md text-xl text-on-surface">
+						PNW Refresh
+					</h3>
+					<p class="font-body-md text-body-md text-sm text-secondary">
+						A clean, modern bathroom remodel featuring warm PNW inspired materials and
+						minimalist fixtures.
+					</p>
+				</div>
+			</div>
+			<!-- Project 4: Portland Heights Chef's Kitchen (Large) -->
+			<div
+				class="group project-card relative overflow-hidden rounded-xl border border-gray-subtle bg-surface-white md:col-span-8"
+			>
+				<div class="aspect-video overflow-hidden">
+					<img
+						alt="Kitchen Renovation + Addition"
+						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src={kitchenrenoandAddition}
+					/>
+				</div>
+				<div class="p-8">
+					<div class="mb-4 flex items-start justify-between">
+						<div>
+							<span
+								class="mb-2 inline-block rounded-full bg-primary-container/10 px-3 py-1 text-[10px] font-bold tracking-wider text-primary uppercase"
+								>Addition</span
+							>
+							<h3 class="font-headline-md text-headline-md text-on-surface">
+								Vancouver Kitchen Reno + Full House Addition
+							</h3>
+						</div>
+					</div>
+					<p class="font-body-md text-body-md text-secondary">
+						Completely redesigned kitchen with an addition behind to expand the living
+						room.
+					</p>
+				</div>
+			</div>
+			<!-- Project 5: Lake Oswego Guest Bath -->
+			<div
+				class="group project-card relative overflow-hidden rounded-xl border border-gray-subtle bg-surface-white md:col-span-6"
+			>
+				<div class="aspect-16/10 overflow-hidden">
+					<img
+						alt="Guest Bath in Richfield"
+						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src={richfieldbathroomreno}
+					/>
+				</div>
+				<div class="p-6">
+					<span
+						class="mb-2 inline-block rounded-full bg-primary-container/10 px-3 py-1 text-[10px] font-bold tracking-wider text-primary uppercase"
+						>Bathroom</span
+					>
+					<h3 class="mb-2 font-headline-md text-headline-md text-xl text-on-surface">
+						Ridgefield Bathroom Renovation
+					</h3>
+					<p class="font-body-md text-body-md text-secondary">
+						Small space, big impact. Using vertical textures and big windows to create
+						an airy feel and a view of the nature of PNW.
+					</p>
+				</div>
+			</div>
+			<!-- Project 6: Ridgefield Outdoor Living -->
+			<div
+				class="group project-card relative overflow-hidden rounded-xl border border-gray-subtle bg-surface-white md:col-span-6"
+			>
+				<div class="aspect-16/10 overflow-hidden">
+					<img
+						alt="Bathroom renovation"
+						class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src={bathroom2}
+					/>
+				</div>
+				<div class="p-6">
+					<span
+						class="mb-2 inline-block rounded-full bg-primary-container/10 px-3 py-1 text-[10px] font-bold tracking-wider text-primary uppercase"
+						>Bathroom</span
+					>
+					<h3 class="mb-2 font-headline-md text-headline-md text-xl text-on-surface">
+						Vancouver Bathroom Reno + Full House
+					</h3>
+					<p class="font-body-md text-body-md text-secondary">
+						Floor to ceiling tile covered walls, modern light fixtures and heated
+						floors.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- CTA Section -->
+	<section
+		class="border-y border-gray-subtle bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop"
+	>
+		<div class="mx-auto max-w-7xl px-grid-margin text-center">
+			<h2 class="mb-6 font-display-lg text-display-lg text-on-surface md:text-display-lg">
+				Ready to Start Your Own Transformation?
+			</h2>
+			<p class="mx-auto mb-10 max-w-2xl font-body-lg text-body-lg text-secondary">
+				From initial design to final walkthrough, we provide a stress-free experience and
+				craftsmanship that lasts a lifetime.
+			</p>
+			<div class="flex flex-col items-center justify-center gap-4 md:flex-row">
+				<button
+					class="w-full rounded-full bg-primary px-10 py-4 font-label-caps text-label-caps text-on-primary transition-all hover:-translate-y-1 hover:shadow-xl md:w-auto"
+				>
+					Book Your Free Estimate
+				</button>
+				<button
+					class="w-full rounded-full border border-primary px-10 py-4 font-label-caps text-label-caps text-primary transition-all hover:bg-primary/5 md:w-auto"
+				>
+					View More Reviews
+				</button>
+			</div>
+		</div>
+	</section>
+</main>
