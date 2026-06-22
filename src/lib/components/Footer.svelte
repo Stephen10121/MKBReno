@@ -15,6 +15,9 @@
 				Transforming homes with quality craftsmanship and exceptional attention to detail in
 				Vancouver, WA and surrounding areas.
 			</p>
+			<p class="mb-6 leading-relaxed text-on-surface-variant dark:text-surface-variant">
+				Address: 5505 NE 45th St, Vancouver, WA 98661
+			</p>
 			<div class="flex gap-4">
 				<div
 					class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary"
@@ -139,7 +142,7 @@
 	>
 		<p class="font-label-caps text-label-caps text-on-surface-variant/70">
 			© {new Date().getFullYear()} MKB Renovations. Licensed &amp; Insured. Serving Vancouver, WA
-			&amp; surrounding areas. Phone: (360) 991-7646
+			&amp; surrounding areas. Phone: (360) 991-7646.
 		</p>
 	</div>
 </footer>

@@ -1,4 +1,4 @@
-<section class="bg-surface py-section-gap-mobile md:py-section-gap-desktop">
+<section class="bg-surface py-section-gap-mobile md:py-section-gap-desktop" id="#faq">
 	<div
 		class="mx-auto max-w-7xl translate-y-0 px-grid-margin opacity-100 transition-all duration-1000"
 	>
