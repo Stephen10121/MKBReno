@@ -278,10 +278,9 @@
 						The Vancouver Transformation
 					</h2>
 					<p class="mb-8 text-body-lg leading-relaxed text-on-surface-variant">
-						This whole-house project in Vancouver involved removing structural walls to
-						create a vibrant, light-filled open concept. We utilized semi-custom green
-						cabinetry to anchor the space, paired with quartz surfaces and white oak
-						flooring.
+						This whole-house project in Vancouver involved expanding the living room to
+						create a vibrant, open space concept. We utilized semi-custom gray cabinetry
+						to anchor the space, paired with marble surfaces and oak flooring.
 					</p>
 					<div class="mb-10 grid grid-cols-2 gap-8">
 						<div>
