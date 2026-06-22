@@ -1,6 +1,7 @@
-import { command, form } from '$app/server';
 import { invalid } from '@sveltejs/kit';
+import { form } from '$app/server';
 import { config } from 'dotenv';
+import { Resend } from 'resend';
 import * as v from 'valibot';
 
 config();
@@ -63,5 +64,19 @@ export const contactForm = form(ContactFormSchema, async (formData, issues) => {
 		}
 	}
 
-	console.log(formData);
+	const resend = new Resend(process.env['RESEND_KEY']);
+
+	try {
+		const res = await resend.emails.send({
+			from: `${formData.name} <contact@mkb-renovations.com>`,
+			to: [process.env.MAILTO!],
+			subject: `Website Contact Form from ${formData.name}`,
+			replyTo: formData.email,
+			html: `<h1>From: ${formData.email}</h1><h2>Name: ${formData.name}</h2><h2>Phone: ${formData.phone}</h2><h2>Project Type: ${formData.projectType}</h2><p>Project Description: ${formData.message}</p>`
+		});
+		console.log(res);
+	} catch (err) {
+		console.log(err);
+		invalid(issues.turnStileToken('Failed to send project details. Try again later.'));
+	}
 });

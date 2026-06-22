@@ -102,7 +102,7 @@
 					</div>
 					<form
 						{...contactForm.enhance(async ({ submit, form }) => {
-							let savingChanges = toast.loading('Saving Changes.', {
+							let savingChanges = toast.loading('Sending Request.', {
 								duration: Number.POSITIVE_INFINITY
 							});
 							try {
@@ -131,6 +131,9 @@
 						{#if token}
 							<input {...contactForm.fields.turnStileToken.as('hidden', token)} />
 						{/if}
+						{#each contactForm.fields.turnStileToken.issues() as issue}
+							<p class="text-sm text-red-500">{issue.message}</p>
+						{/each}
 						<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 							<div class="space-y-1">
 								<label
