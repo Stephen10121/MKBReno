@@ -1,5 +1,5 @@
 <script lang="ts">
-	import pnw from '@/assets/pnw.jpg';
+	import pnw from '@/assets/pnw.webp';
 	import servingHere from '@/assets/servinghere.webp';
 </script>
 

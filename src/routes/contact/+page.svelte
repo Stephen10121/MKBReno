@@ -1,5 +1,42 @@
 <script lang="ts">
-	import pnw from '@/assets/pnw.jpg';
+	import { contactForm } from '../contact.remote.js';
+	import { turnstileWidgetId } from '@/store';
+	import { loadScript } from '@/utils.js';
+	import { toast } from 'svelte-sonner';
+	import pnw from '@/assets/pnw.webp';
+	import { onMount } from 'svelte';
+
+	let { data } = $props();
+	let token = $state('');
+
+	onMount(() => {
+		try {
+			loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js').then(() => {
+				//@ts-ignore
+				turnstileWidgetId.set(
+					//@ts-ignore
+					turnstile.render('#turnstile-container', {
+						sitekey: data.turnstileSiteKey,
+						callback: function (token2: string) {
+							token = token2;
+						}
+					})
+				);
+			});
+		} catch (err) {
+			console.log(err);
+		}
+
+		return () => {
+			const existingScript = document.querySelector(
+				'script[src="https://challenges.cloudflare.com/turnstile/v0/api.js"]'
+			);
+
+			if (existingScript) {
+				document.head.removeChild(existingScript);
+			}
+		};
+	});
 </script>
 
 <svelte:head>
@@ -12,6 +49,7 @@
 	<meta property="twitter:title" content="Contact Us - MKB Renovations" />
 </svelte:head>
 
+<div id="turnstile-container"></div>
 <main class="pt-20">
 	<!-- Hero Section -->
 	<section class="relative flex h-153.5 min-h-125 items-center overflow-hidden">
@@ -63,12 +101,36 @@
 						</p>
 					</div>
 					<form
+						{...contactForm.enhance(async ({ submit, form }) => {
+							let savingChanges = toast.loading('Saving Changes.', {
+								duration: Number.POSITIVE_INFINITY
+							});
+							try {
+								await submit();
+								form.reset();
+								toast.dismiss(savingChanges);
+
+								//@ts-ignore
+								turnstile.reset($turnstileWidgetId);
+
+								if (!contactForm.fields.allIssues()) {
+									toast.success('Thank you for your message.', {
+										description: 'We will contact you soon!'
+									});
+								}
+							} catch (err) {
+								console.log(err);
+								toast.dismiss(savingChanges);
+								toast.error('Failed to send message.', {
+									description: 'Please try again later.'
+								});
+							}
+						})}
 						class="space-y-6"
-						onsubmit={(e) => {
-							e.preventDefault();
-							alert('Estimate request submitted!');
-						}}
 					>
+						{#if token}
+							<input {...contactForm.fields.turnStileToken.as('hidden', token)} />
+						{/if}
 						<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 							<div class="space-y-1">
 								<label
@@ -76,7 +138,11 @@
 									class="block font-label-caps text-label-caps text-on-surface-variant"
 									>Full Name</label
 								>
+								{#each contactForm.fields.name.issues() as issue}
+									<p class="text-sm text-red-500">{issue.message}</p>
+								{/each}
 								<input
+									{...contactForm.fields.name.as('text')}
 									class="h-12 w-full rounded-lg border border-gray-subtle px-4 transition-all outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 									placeholder="John Doe"
 									required
@@ -90,7 +156,11 @@
 									class="block font-label-caps text-label-caps text-on-surface-variant"
 									>Phone Number</label
 								>
+								{#each contactForm.fields.phone.issues() as issue}
+									<p class="text-sm text-red-500">{issue.message}</p>
+								{/each}
 								<input
+									{...contactForm.fields.phone.as('tel')}
 									class="h-12 w-full rounded-lg border border-gray-subtle px-4 transition-all outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 									placeholder="(360) 000-0000"
 									required
@@ -105,7 +175,11 @@
 								class="block font-label-caps text-label-caps text-on-surface-variant"
 								>Email Address</label
 							>
+							{#each contactForm.fields.email.issues() as issue}
+								<p class="text-sm text-red-500">{issue.message}</p>
+							{/each}
 							<input
+								{...contactForm.fields.email.as('email')}
 								class="h-12 w-full rounded-lg border border-gray-subtle px-4 transition-all outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 								placeholder="john@example.com"
 								required
@@ -120,14 +194,15 @@
 								>Project Type</label
 							>
 							<select
+								{...contactForm.fields.projectType.as('select')}
 								id="what"
 								class="h-12 w-full rounded-lg border border-gray-subtle bg-surface-white px-4 outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 							>
 								<option>Kitchen Remodeling</option>
 								<option>Bathroom Remodeling</option>
 								<option>Whole-House Renovation</option>
-								<option>Siding &amp; Windows</option>
-								<option>Decking &amp; Roofing</option>
+								<option>Addition</option>
+								<option>ADU</option>
 							</select>
 						</div>
 						<div class="space-y-1">
@@ -136,7 +211,12 @@
 								class="block font-label-caps text-label-caps text-on-surface-variant"
 								>Project Details</label
 							>
+							{#each contactForm.fields.message.issues() as issue}
+								<p class="text-sm text-red-500">{issue.message}</p>
+							{/each}
 							<textarea
+								{...contactForm.fields.message.as('text')}
+								required
 								id="details"
 								class="w-full rounded-lg border border-gray-subtle px-4 py-3 transition-colors outline-none focus:border-primary focus:ring-1 focus:ring-primary"
 								placeholder="Describe your vision..."
@@ -165,7 +245,7 @@
 								<div>
 									<p class="font-bold text-on-surface">Service Area</p>
 									<p class="text-secondary">
-										Serving Vancouver, WA &amp; Portland, OR
+										Serving Vancouver, WA & Surrounding Areas
 									</p>
 								</div>
 							</div>
@@ -177,7 +257,7 @@
 								<div>
 									<p class="font-bold text-on-surface">Business Hours</p>
 									<p class="text-secondary">
-										Mon - Fri: 8:00 AM - 6:00 PM<br />Sat: By Appointment
+										Mon - Fri: 8:30 AM - 5:00 PM<br />Sat: 10:00 AM - 2:30 PM
 									</p>
 								</div>
 							</div>
@@ -251,42 +331,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Trust / Social Proof Section -->
-	<section class="overflow-hidden bg-surface-white py-section-gap-mobile">
-		<div class="mx-auto max-w-7xl px-grid-margin text-center">
-			<p class="mb-12 font-label-caps text-label-caps text-secondary">
-				Proudly Licensed &amp; Insured Contractor
-			</p>
-			<div
-				class="flex flex-wrap items-center justify-center gap-12 opacity-60 grayscale transition-all duration-700 hover:grayscale-0"
-			>
-				<img
-					alt="Partner Logo"
-					class="h-12 w-auto"
-					data-alt="A minimalist logo of a professional building contractors association, representing industry standards and certified expertise. The aesthetic is corporate and clean, with balanced geometric proportions and a professional navy blue and white color scheme."
-					src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdHOwmvWkCPIwcqfJPqlY1M4RUcvmm6bA7ilYqA9jqynMr6WP3SSBoJl5DOvwm-PieGOGpe3aP4-8YKEiRTmOqglusS-Vx-UuXtATQgHfEfwvmcWpujdA7EKV7P3oo0T3mWt9OkelLgVr0ekcp-dToiy1zQuK_dlhyUKRel3_auinVHKAhWbSmcO5exKJjRWsg4JkntZLKFINfWYCt-bMWxqVLoz-UzK4xTQdnGk7GYIJQxy3s8mSO0zKAgrUs2v3Z0ynbRA-FQN-B"
-				/>
-				<img
-					alt="Partner Logo"
-					class="h-12 w-auto"
-					data-alt="A modern corporate architectural certification seal, showcasing high-end craftsmanship and professional reliability. The design features minimalist typography and a subtle circular crest, set against a bright, airy background consistent with the MKB Renovations brand identity."
-					src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ6gw33WX_vttSoJM03VrSUR_FctK-HwNyB5sGs9qzBtk-GFdHEaUfLM8qqxw9x1rrL1Cf_q3M2Dm8zkq5k4QXxp1TDN56VYZiwIiF6PIbF8b9rlYa5VC4S0n5nab7bArdZ7ZvDLVhwaREz8PaMOHfhkkE0L03KFzBmQSjERUafEFdM_4Nouen_kPrkqeZ7KmvuQ8KJ2g_Xo2R3cGJIne7xzl7Hg1Xxh-uqCGef1v5doDjOjXQCSZvK87cdsVGachaEgcBxlzD2eGH"
-				/>
-				<img
-					alt="Partner Logo"
-					class="h-12 w-auto"
-					data-alt="A clean, minimalist logo representing premium home building materials and supply partners. The visual style is modern and architectural, focusing on crisp lines and professional branding to evoke trust and high-quality material sourcing for renovations."
-					src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbl4_Hf_RVnQa9_TLNoqohiD9yMYCGmQwwkLl06ZGZeKjt7QntRm1ohwdHgJFHonHzCpRWCSKabtmIihymB3NK-J0-l4jeLRdn3cyKyxqd8TA9tt7Gj-6Gxkx1m5EFJguJ6esXlYnTkFpSqGctSUUsvCOkYNaK1gEb2ZWSS6u54ZbOBXMnXylLtYBYn5vicYzqtX0UIYvs13B1hTqIcVtOynQtY1I-vGibiyMz-DdxZ_O_DQJDa5A2A8O3DSBsudNh4muwON4GR3yW"
-				/>
-				<img
-					alt="Partner Logo"
-					class="h-12 w-auto"
-					data-alt="A corporate safety and insurance seal emblem, indicating professional protection and licensed operation. The aesthetic is clean and modern, using a balanced layout and sophisticated typography to communicate transparency and security for homeowners."
-					src="https://lh3.googleusercontent.com/aida-public/AB6AXuBramSA1hPl7_UrZQ77yB7fqwjnLPs3dovJvADk0OutnQCbWn3sJboLqmNMIcXf_6CZ4VeFLrX-Qvd35pUJn7wzlag2XYfIix4JSBnz7ayWPkIUB8mkRj0uoR4lET1czP1tqCX-oklnmNJbxmqMxLDPmJuRm3fEG8AdHAHFW8RQ_sh9ricBu4OLbP4maGKGmJ-pLcP_yv9MKy05Znu6R9ebTBuiFUHritm7gIMfOR7_aivrr8jkZxNDC60b7d0T3UL15jScqhjVleDl"
-				/>
 			</div>
 		</div>
 	</section>

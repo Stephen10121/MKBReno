@@ -1,8 +1,9 @@
 <script lang="ts">
-	import herohome from '@/assets/herohome.jpg';
-	import bathroom from '@/assets/bathroom.jpg';
-	import sinkImg from '@/assets/sink.png';
-	import houseReno2 from '@/assets/housereno2.png';
+	import herohome from '@/assets/herohome.webp';
+	import bathroom from '@/assets/bathroom.webp';
+	import adu from '@/assets/adu.webp';
+	import sinkImg from '@/assets/sink.webp';
+	import houseReno2 from '@/assets/housereno2.webp';
 </script>
 
 <svelte:head>
@@ -40,7 +41,7 @@
 			</p>
 			<div class="flex flex-wrap justify-center gap-4">
 				<a
-					class="flex items-center gap-2 rounded-lg bg-primary px-8 py-4 font-label-caps text-label-caps text-on-primary transition-all hover:opacity-90"
+					class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-center font-label-caps text-label-caps text-on-primary transition-all hover:opacity-90 md:w-fit"
 					href="#kitchen"
 				>
 					View Kitchens <span class="material-symbols-outlined text-[20px]"
@@ -48,11 +49,17 @@
 					>
 				</a>
 				<a
-					class="flex items-center gap-2 rounded-lg border border-gray-subtle px-8 py-4 font-label-caps text-label-caps text-secondary transition-all hover:bg-surface-container"
+					class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-subtle px-8 py-4 font-label-caps text-label-caps text-secondary transition-all hover:bg-surface-container md:w-fit"
 					href="#bathroom"
 				>
 					View Bathrooms <span class="material-symbols-outlined text-[20px]">bathtub</span
 					>
+				</a>
+				<a
+					class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-subtle px-8 py-4 font-label-caps text-label-caps text-secondary transition-all hover:bg-surface-container md:w-fit"
+					href="#adu"
+				>
+					View ADU's <span class="material-symbols-outlined text-[20px]">house</span>
 				</a>
 			</div>
 		</div>
@@ -274,6 +281,113 @@
 			</div>
 		</div>
 	</section>
+	<!-- ADU's -->
+	<section class="bg-surface py-section-gap-mobile md:py-section-gap-desktop" id="adu">
+		<div class="mx-auto max-w-7xl px-grid-margin">
+			<div class="grid grid-cols-1 items-center gap-grid-gutter md:grid-cols-12">
+				<div class="order-2 md:order-1 md:col-span-5">
+					<h2
+						class="mb-6 border-l-4 border-primary pl-4 font-headline-md text-headline-md text-on-surface"
+					>
+						Additions/ADU's
+					</h2>
+					<p
+						class="mb-8 font-body-md text-body-md leading-relaxed text-on-surface-variant"
+					>
+						Expand your home with thoughtful, functional spaces built to blend
+						seamlessly with your existing architecture. From early planning to final
+						inspection, we handle every detail to create rooms that feel natural,
+						intentional, and built to last.
+					</p>
+					<div class="mb-8 space-y-4">
+						<div class="flex items-start gap-4">
+							<span
+								class="material-symbols-outlined text-primary"
+								style="font-variation-settings: 'FILL' 1;">check_circle</span
+							>
+							<div>
+								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
+									Design & Space Planning
+								</p>
+								<p class="text-sm text-secondary">
+									Smart layouts that maximize square footage, natural light, and
+									long-term usability.
+								</p>
+							</div>
+						</div>
+						<div class="flex items-start gap-4">
+							<span
+								class="material-symbols-outlined text-primary"
+								style="font-variation-settings: 'FILL' 1;">check_circle</span
+							>
+							<div>
+								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
+									Foundation & Structural Work
+								</p>
+								<p class="text-sm text-secondary">
+									Engineered footings, framing, and load-bearing solutions that
+									ensure safety and durability.
+								</p>
+							</div>
+						</div>
+						<div class="flex items-start gap-4">
+							<span
+								class="material-symbols-outlined text-primary"
+								style="font-variation-settings: 'FILL' 1;">check_circle</span
+							>
+							<div>
+								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
+									Full ADU Construction
+								</p>
+								<p class="text-sm text-secondary">
+									Detached or attached units built to code, ideal for guests,
+									rental income, or multigenerational living.
+								</p>
+							</div>
+						</div>
+						<div class="flex items-start gap-4">
+							<span
+								class="material-symbols-outlined text-primary"
+								style="font-variation-settings: 'FILL' 1;">check_circle</span
+							>
+							<div>
+								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
+									Interior Finishes
+								</p>
+								<p class="text-sm text-secondary">
+									Quality flooring, cabinetry, fixtures, and trim that bring
+									comfort and cohesion to the new space.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="order-1 md:order-2 md:col-span-7">
+					<div class="group relative">
+						<div
+							class="aspect-4/3 overflow-hidden rounded-xl border border-gray-subtle shadow-sm"
+						>
+							<img
+								alt="Luxury ADU"
+								class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+								src={adu}
+							/>
+						</div>
+						<div
+							class="absolute -bottom-6 -left-6 hidden max-w-60 rounded-xl border border-gray-subtle bg-surface-white p-6 shadow-lg lg:block"
+						>
+							<p class="mb-1 text-headline-md font-bold text-primary">98%</p>
+							<p
+								class="font-label-caps text-label-caps text-sm leading-tight text-secondary"
+							>
+								Customer Satisfaction Rating
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- Whole House Renovations -->
 	<section class="bg-surface py-section-gap-mobile md:py-section-gap-desktop" id="whole-house">
 		<div class="mx-auto max-w-7xl px-grid-margin">
@@ -392,7 +506,7 @@
 			<div class="relative z-10 flex flex-col items-center justify-center gap-6 md:flex-row">
 				<a
 					href="/contact"
-					class="rounded-full bg-primary px-10 py-5 font-headline-md text-headline-md text-on-primary shadow-lg transition-transform hover:scale-105"
+					class="rounded-full bg-primary px-10 py-5 font-headline-md text-sm text-on-primary shadow-lg transition-transform hover:scale-105 sm:text-headline-md"
 				>
 					Get Your FREE Estimate
 				</a>

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import heroImg from '@/assets/herohome.jpg';
-	import kitchenImg from '@/assets/Hero.jpg';
-	import bathroomImg from '@/assets/bathroom.jpg';
-	import houseReno from '@/assets/housereno.jpg';
-	import vancouverReno from '@/assets/vancouverreno.jpeg';
+	import heroImg from '@/assets/herohome.webp';
+	import kitchenImg from '@/assets/Hero.webp';
+	import bathroomImg from '@/assets/bathroom.webp';
+	import houseReno from '@/assets/housereno.webp';
+	import vancouverReno from '@/assets/vancouverreno.webp';
 </script>
 
 <svelte:head>
@@ -41,16 +41,18 @@
 
 <main class="pt-20">
 	<!-- Hero Section -->
-	<section class="relative flex h-[85vh] min-h-150 items-center overflow-hidden">
+	<section class="overlow-hidden relative flex min-h-screen items-center">
 		<div class="absolute inset-0 z-0">
 			<img class="h-full w-full object-cover" alt="Hero home page" src={heroImg} />
-			<div class="absolute inset-0 bg-linear-to-r from-black/60 to-transparent"></div>
+			<div class="noise absolute inset-0 bg-linear-to-r from-black/60 to-transparent"></div>
 		</div>
 		<div class="relative z-10 mx-auto w-full max-w-7xl px-grid-margin">
-			<div class="max-w-2xl text-white">
+			<div
+				class="mt-10 flex max-w-2xl flex-col gap-2 pb-10 text-white sm:mt-0 sm:gap-0 sm:pb-10"
+			>
 				<span
-					class="mb-6 inline-block rounded-full bg-primary/90 px-4 py-1 font-label-caps text-label-caps text-on-primary"
-					>Licensed &amp; Insured • Vancouver &amp; Portland</span
+					class="mb-6 inline-block w-fit max-w-full overflow-hidden rounded-full bg-primary/90 px-4 py-1 font-label-caps text-label-caps text-nowrap text-ellipsis text-on-primary"
+					>Licensed & Insured • Clark County & Beyond</span
 				>
 				<h1
 					class="mb-6 font-display-lg-mobile text-display-lg-mobile leading-tight md:font-display-lg md:text-display-lg"
@@ -69,12 +71,6 @@
 						class="rounded-lg bg-primary px-8 py-4 text-lg font-bold text-on-primary transition-all hover:bg-primary-container active:scale-95"
 					>
 						Get Your FREE Estimate
-					</a>
-					<a
-						href="/projects"
-						class="rounded-lg border border-white/30 bg-white/10 px-8 py-4 text-lg font-bold text-white backdrop-blur-md transition-all hover:bg-white/20"
-					>
-						View Recent Projects
 					</a>
 				</div>
 				<div class="mt-12 flex items-center gap-6">
@@ -158,7 +154,7 @@
 	<!-- Services Overview (Bento Grid Style) -->
 	<section class="bg-white py-section-gap-mobile md:py-section-gap-desktop">
 		<div class="mx-auto max-w-7xl px-grid-margin">
-			<div class="mb-12 flex flex-col items-end justify-between md:flex-row">
+			<div class="mb-12 flex flex-col items-start justify-between sm:items-end md:flex-row">
 				<div class="max-w-xl">
 					<h2
 						class="mb-4 font-display-lg-mobile text-display-lg-mobile text-on-surface md:font-headline-md md:text-3xl"
@@ -179,7 +175,7 @@
 			<div class="grid h-auto grid-cols-1 gap-6 md:h-175 md:grid-cols-12">
 				<!-- Kitchens -->
 				<div
-					class="group relative overflow-hidden rounded-2xl border border-gray-subtle md:col-span-8"
+					class="group relative min-h-150 overflow-hidden rounded-2xl border border-gray-subtle md:col-span-8 md:min-h-fit"
 				>
 					<img
 						class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -241,7 +237,7 @@
 				</div>
 				<!-- Whole House -->
 				<div
-					class="group relative h-64 overflow-hidden rounded-2xl border border-gray-subtle md:col-span-12"
+					class="group relative h-64 min-h-100 overflow-hidden rounded-2xl border border-gray-subtle md:col-span-12 md:min-h-fit"
 				>
 					<img
 						class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -397,12 +393,12 @@
 				<div class="flex flex-col justify-center gap-6 sm:flex-row">
 					<a
 						href="/contact"
-						class="rounded-lg bg-white px-10 py-5 text-xl font-bold text-primary shadow-lg transition-all hover:bg-surface-container-low"
+						class="rounded-lg bg-white px-10 py-5 text-sm font-bold text-primary shadow-lg transition-all hover:bg-surface-container-low md:text-xl"
 					>
 						Get FREE Estimate
 					</a>
 					<a
-						class="flex items-center justify-center gap-3 rounded-lg border border-white/30 px-10 py-5 text-xl font-bold text-white transition-all hover:bg-white/10"
+						class="flex items-center justify-center gap-3 rounded-lg border border-white/30 px-10 py-5 text-sm font-bold text-white transition-all hover:bg-white/10 md:text-xl"
 						href="tel:3609917646"
 					>
 						<span class="material-symbols-outlined">call</span>
@@ -414,7 +410,9 @@
 	</section>
 	<section class="bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop">
 		<div class="mx-auto max-w-7xl px-grid-margin">
-			<div class="mb-12 flex flex-col items-center justify-between md:flex-row">
+			<div
+				class="mb-12 flex flex-col items-start justify-between sm:items-center md:flex-row"
+			>
 				<div class="text-left">
 					<h2
 						class="mb-2 font-display-lg-mobile text-display-lg-mobile text-on-surface md:font-headline-md md:text-3xl"
@@ -424,7 +422,7 @@
 					<p class="text-secondary">Proudly serving local communities in Clark County.</p>
 				</div>
 				<div class="mx-8 hidden h-px grow bg-outline-variant/30 md:block"></div>
-				<div class="flex items-center gap-2 font-bold text-primary">
+				<div class="mt-2 flex items-center gap-2 font-bold text-primary">
 					<span class="material-symbols-outlined">location_on</span>
 					<span>Pacific Northwest</span>
 				</div>

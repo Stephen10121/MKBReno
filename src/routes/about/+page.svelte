@@ -1,7 +1,7 @@
 <script lang="ts">
-	import MarkImage from '$lib/assets/mark.jpg';
-	import kitchenIMG from '@/assets/Hero.jpg';
-	import renovationIMG from '@/assets/housereno.jpg';
+	import MarkImage from '$lib/assets/mark.webp';
+	import kitchenIMG from '@/assets/Hero.webp';
+	import renovationIMG from '@/assets/housereno.webp';
 </script>
 
 <svelte:head>

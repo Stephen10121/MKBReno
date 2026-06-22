@@ -1,18 +1,14 @@
 <script lang="ts">
-	import FloatingContactButton from '@/components/FloatingContactButton.svelte';
 	import { Toaster } from '$lib/components/ui/sonner/index.js';
-	import ContactModal from '@/components/ContactModal.svelte';
 	import Footer from '@/components/Footer.svelte';
 	import { afterNavigate } from '$app/navigation';
 	import Header from '@/components/Header.svelte';
-	import { isContactModalOpen, topHeaderStatus, turnstileWidgetId } from '@/store';
 	import logo from '$lib/assets/mkblogo2.png';
 	import { browser } from '$app/environment';
 	import './layout.css';
-	import { onMount } from 'svelte';
-	import { loadScript } from '@/utils.js';
+	import FAQ from '@/components/FAQ.svelte';
 
-	let { children, data } = $props();
+	let { children } = $props();
 
 	afterNavigate(() => {
 		if (browser) {
@@ -37,37 +33,6 @@
 			});
 		}
 	});
-
-	let token = $state('');
-
-	onMount(() => {
-		try {
-			loadScript('https://challenges.cloudflare.com/turnstile/v0/api.js').then(() => {
-				//@ts-ignore
-				turnstileWidgetId.set(
-					//@ts-ignore
-					turnstile.render('#turnstile-container', {
-						sitekey: data.turnstileSiteKey,
-						callback: function (token2: string) {
-							token = token2;
-						}
-					})
-				);
-			});
-		} catch (err) {
-			console.log(err);
-		}
-
-		return () => {
-			const existingScript = document.querySelector(
-				'script[src="https://challenges.cloudflare.com/turnstile/v0/api.js"]'
-			);
-
-			if (existingScript) {
-				document.head.removeChild(existingScript);
-			}
-		};
-	});
 </script>
 
 <svelte:head>
@@ -87,12 +52,8 @@
 <Toaster theme="light" />
 
 <div class="bg-background font-body-md text-on-background antialiased">
-	<div id="turnstile-container"></div>
 	<Header />
 	{@render children()}
-	{#if $topHeaderStatus === 'hide'}
-		<FloatingContactButton click={() => isContactModalOpen.set(true)} />
-	{/if}
-	<ContactModal turnstileSiteToken={token} />
+	<FAQ />
 	<Footer />
 </div>

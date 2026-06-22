@@ -1,5 +1,5 @@
 <script lang="ts">
-	import hero from '@/assets/Hero.jpg';
+	import hero from '@/assets/Hero.webp';
 
 	let { data } = $props();
 </script>
