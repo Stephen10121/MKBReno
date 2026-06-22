@@ -49,6 +49,12 @@
 						href="/services#whole-house">Whole-House Renovations</a
 					>
 				</li>
+				<li>
+					<a
+						class="text-on-surface-variant transition-all hover:text-primary hover:underline dark:text-surface-variant dark:hover:text-primary-fixed"
+						href="/services#adu">Additions/ADU's</a
+					>
+				</li>
 			</ul>
 		</div>
 		<div>
