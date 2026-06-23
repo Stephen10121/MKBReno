@@ -4,6 +4,19 @@
 	import adu from '@/assets/adu.webp';
 	import sinkImg from '@/assets/sink.webp';
 	import houseReno2 from '@/assets/housereno2.webp';
+	import {
+		Bath,
+		CircleArrowRight,
+		CircleCheck,
+		Grid2X2,
+		Hammer,
+		House,
+		LampCeiling,
+		Leaf,
+		Phone,
+		ShowerHead,
+		Utensils
+	} from '@lucide/svelte';
 </script>
 
 <svelte:head>
@@ -44,22 +57,19 @@
 					class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-center font-label-caps text-label-caps text-on-primary transition-all hover:opacity-90 md:w-fit"
 					href="#kitchen"
 				>
-					View Kitchens <span class="material-symbols-outlined text-[20px]"
-						>restaurant</span
-					>
+					View Kitchens <Utensils />
 				</a>
 				<a
 					class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-subtle px-8 py-4 font-label-caps text-label-caps text-secondary transition-all hover:bg-surface-container md:w-fit"
 					href="#bathroom"
 				>
-					View Bathrooms <span class="material-symbols-outlined text-[20px]">bathtub</span
-					>
+					View Bathrooms <Bath />
 				</a>
 				<a
 					class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-subtle px-8 py-4 font-label-caps text-label-caps text-secondary transition-all hover:bg-surface-container md:w-fit"
 					href="#adu"
 				>
-					View ADU's <span class="material-symbols-outlined text-[20px]">house</span>
+					View ADU's <House />
 				</a>
 			</div>
 		</div>
@@ -83,10 +93,7 @@
 					</p>
 					<div class="mb-8 space-y-4">
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Custom Cabinetry
@@ -98,10 +105,7 @@
 							</div>
 						</div>
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Countertop Installation
@@ -113,10 +117,7 @@
 							</div>
 						</div>
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Appliance Integration
@@ -128,10 +129,7 @@
 							</div>
 						</div>
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Lighting Design
@@ -212,10 +210,7 @@
 					<ul class="space-y-6">
 						<li class="flex gap-4">
 							<div class="h-fit rounded-full bg-primary-fixed-dim/30 p-2">
-								<span
-									class="material-symbols-outlined text-primary"
-									style="font-variation-settings: 'FILL' 1;">spa</span
-								>
+								<Leaf class="text-primary" />
 							</div>
 							<div>
 								<h4 class="font-label-caps text-label-caps text-on-surface">
@@ -229,10 +224,7 @@
 						</li>
 						<li class="flex gap-4">
 							<div class="h-fit rounded-full bg-primary-fixed-dim/30 p-2">
-								<span
-									class="material-symbols-outlined text-primary"
-									style="font-variation-settings: 'FILL' 1;">faucet</span
-								>
+								<LampCeiling class="text-primary" />
 							</div>
 							<div>
 								<h4 class="font-label-caps text-label-caps text-on-surface">
@@ -246,10 +238,7 @@
 						</li>
 						<li class="flex gap-4">
 							<div class="h-fit rounded-full bg-primary-fixed-dim/30 p-2">
-								<span
-									class="material-symbols-outlined text-primary"
-									style="font-variation-settings: 'FILL' 1;">shower</span
-								>
+								<ShowerHead class="text-primary" />
 							</div>
 							<div>
 								<h4 class="font-label-caps text-label-caps text-on-surface">
@@ -262,10 +251,7 @@
 						</li>
 						<li class="flex gap-4">
 							<div class="h-fit rounded-full bg-primary-fixed-dim/30 p-2">
-								<span
-									class="material-symbols-outlined text-primary"
-									style="font-variation-settings: 'FILL' 1;">grid_view</span
-								>
+								<Grid2X2 class="text-primary" />
 							</div>
 							<div>
 								<h4 class="font-label-caps text-label-caps text-on-surface">
@@ -301,10 +287,7 @@
 					</p>
 					<div class="mb-8 space-y-4">
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Design & Space Planning
@@ -316,10 +299,7 @@
 							</div>
 						</div>
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Foundation & Structural Work
@@ -331,10 +311,7 @@
 							</div>
 						</div>
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Full ADU Construction
@@ -346,10 +323,7 @@
 							</div>
 						</div>
 						<div class="flex items-start gap-4">
-							<span
-								class="material-symbols-outlined text-primary"
-								style="font-variation-settings: 'FILL' 1;">check_circle</span
-							>
+							<CircleCheck class="text-primary" />
 							<div>
 								<p class="mb-1 font-label-caps text-label-caps text-on-surface">
 									Interior Finishes
@@ -422,12 +396,6 @@
 							Ensuring consistent finishes, flooring, and lighting throughout your
 							entire residence.
 						</p>
-						<!-- <span
-							class="flex items-center gap-2 font-label-caps text-label-caps text-primary"
-							>Learn More <span class="material-symbols-outlined text-[16px]"
-								>arrow_forward</span
-							></span
-						> -->
 					</div>
 				</div>
 				<div
@@ -439,10 +407,9 @@
 							A dedicated lead for every phase, from permitting to final walkthrough.
 						</p>
 					</div>
-					<span
-						class="material-symbols-outlined text-6xl text-primary opacity-20 transition-opacity group-hover:opacity-40"
-						>construction</span
-					>
+					<Hammer
+						class="text-6xl text-primary opacity-20 transition-opacity group-hover:opacity-40"
+					/>
 				</div>
 				<div
 					class="group relative flex flex-col justify-end overflow-hidden rounded-xl border border-gray-subtle bg-surface-white p-8 md:col-span-1"
@@ -465,9 +432,7 @@
 					<p class="mb-4 text-sm text-on-primary/80">
 						Discuss your full-home vision with our experts.
 					</p>
-					<span class="material-symbols-outlined self-end text-4xl"
-						>arrow_circle_right</span
-					>
+					<CircleArrowRight class="self-end text-4xl" />
 				</a>
 			</div>
 		</div>
@@ -514,10 +479,9 @@
 					class="flex items-center gap-3 font-headline-md text-headline-md text-on-surface"
 					href="tel:3609917646"
 				>
-					<span
-						class="material-symbols-outlined rounded-full bg-surface-white p-3 text-primary shadow-sm"
-						>call</span
-					>
+					<Phone
+						class="h-13 w-13 rounded-full bg-surface-white p-3 text-primary shadow-sm"
+					/>
 					(360) 991-7646
 				</a>
 			</div>
@@ -526,13 +490,6 @@
 </main>
 
 <style>
-	.material-symbols-outlined {
-		font-variation-settings:
-			'FILL' 0,
-			'wght' 400,
-			'GRAD' 0,
-			'opsz' 24;
-	}
 	.text-label-caps {
 		text-transform: uppercase;
 	}

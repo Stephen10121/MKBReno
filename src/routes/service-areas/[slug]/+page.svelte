@@ -1,5 +1,18 @@
 <script lang="ts">
 	import hero from '@/assets/Hero.webp';
+	import {
+		ArrowRight,
+		Building2,
+		CircleCheck,
+		DraftingCompass,
+		Handshake,
+		Map,
+		Mountain,
+		Phone,
+		ShieldCheck,
+		Star,
+		TreePine
+	} from '@lucide/svelte';
 
 	let { data } = $props();
 </script>
@@ -7,10 +20,13 @@
 <svelte:head>
 	<title>Serving {data.shortName} - MKB Renovations</title>
 	<meta name="title" content="Serving {data.shortName} - MKB Renovations" />
-	<meta property="og:url" content="https://www.mkb-renovations.com/{data.slug}" />
+	<meta property="og:url" content="https://www.mkb-renovations.com/service-areas/{data.slug}" />
 	<meta property="og:title" content="Serving {data.shortName} - MKB Renovations" />
 
-	<meta property="twitter:url" content="https://www.mkb-renovations.com/{data.slug}" />
+	<meta
+		property="twitter:url"
+		content="https://www.mkb-renovations.com/service-areas/{data.slug}"
+	/>
 	<meta property="twitter:title" content="Serving {data.shortName} - MKB Renovations" />
 </svelte:head>
 
@@ -44,9 +60,7 @@
 						href="/contact"
 						class="flex h-12 items-center gap-2 bg-primary px-8 font-label-caps text-label-caps font-bold text-on-primary transition-all hover:opacity-90"
 					>
-						START YOUR PROJECT <span class="material-symbols-outlined"
-							>arrow_forward</span
-						>
+						START YOUR PROJECT <ArrowRight />
 					</a>
 				</div>
 			</div>
@@ -72,10 +86,7 @@
 			<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:col-span-8">
 				<div class="glass-card group p-8 transition-colors hover:border-primary">
 					<div class="mb-4 text-primary">
-						<span
-							class="material-symbols-outlined text-4xl"
-							style="font-variation-settings: 'FILL' 0;">location_city</span
-						>
+						<Building2 />
 					</div>
 					<h3 class="mb-2 font-headline-md text-headline-md">Downtown &amp; Uptown</h3>
 					<p class="text-body-md text-secondary">
@@ -85,7 +96,7 @@
 				</div>
 				<div class="glass-card group p-8 transition-colors hover:border-primary">
 					<div class="mb-4 text-primary">
-						<span class="material-symbols-outlined text-4xl">landscape</span>
+						<Mountain />
 					</div>
 					<h3 class="mb-2 font-headline-md text-headline-md">
 						{data.neighborhoods[0]} &amp; {data.neighborhoods[2]}
@@ -97,7 +108,7 @@
 				</div>
 				<div class="glass-card group p-8 transition-colors hover:border-primary">
 					<div class="mb-4 text-primary">
-						<span class="material-symbols-outlined text-4xl">park</span>
+						<TreePine />
 					</div>
 					<h3 class="mb-2 font-headline-md text-headline-md">{data.neighborhoods[1]}</h3>
 					<p class="text-body-md text-secondary">
@@ -114,7 +125,7 @@
 							{data.zipCodes.join(', ')} &amp; more.
 						</p>
 					</div>
-					<span class="material-symbols-outlined text-3xl">map</span>
+					<Map />
 				</div>
 			</div>
 		</div>
@@ -156,19 +167,13 @@
 					</p>
 					<ul class="mb-8 space-y-3">
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Custom Island Designs
+							<CircleCheck class="text-xl text-primary" /> Custom Island Designs
 						</li>
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Modern Appliance Integration
+							<CircleCheck class="text-xl text-primary" /> Modern Appliance Integration
 						</li>
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Lighting &amp; Electrical Plans
+							<CircleCheck class="text-xl text-primary" /> Lighting &amp; Electrical Plans
 						</li>
 					</ul>
 				</div>
@@ -199,19 +204,13 @@
 					</p>
 					<ul class="mb-8 space-y-3">
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Walk-in Glass Showers
+							<CircleCheck class="text-xl text-primary" /> Walk-in Glass Showers
 						</li>
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Heated Flooring Systems
+							<CircleCheck class="text-xl text-primary" /> Heated Flooring Systems
 						</li>
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Floating Vanity Installs
+							<CircleCheck class="text-xl text-primary" /> Floating Vanity Installs
 						</li>
 					</ul>
 				</div>
@@ -242,19 +241,13 @@
 					</p>
 					<ul class="mb-8 space-y-3">
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Structural Wall Removal
+							<CircleCheck class="text-xl text-primary" /> Structural Wall Removal
 						</li>
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Unified Flooring &amp; Palettes
+							<CircleCheck class="text-xl text-primary" /> Unified Flooring &amp; Palettes
 						</li>
 						<li class="flex items-center gap-2 text-body-md text-on-surface-variant">
-							<span class="material-symbols-outlined text-xl text-primary"
-								>check_circle</span
-							> Permitting &amp; Design Support
+							<CircleCheck class="text-xl text-primary" /> Permitting &amp; Design Support
 						</li>
 					</ul>
 				</div>
@@ -285,8 +278,7 @@
 						<div
 							class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10"
 						>
-							<span class="material-symbols-outlined text-primary">verified_user</span
-							>
+							<ShieldCheck class="text-primary" />
 						</div>
 						<div>
 							<h4 class="mb-2 font-headline-md text-headline-md">
@@ -302,7 +294,7 @@
 						<div
 							class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10"
 						>
-							<span class="material-symbols-outlined text-primary">architecture</span>
+							<DraftingCompass class="text-primary" />
 						</div>
 						<div>
 							<h4 class="mb-2 font-headline-md text-headline-md">
@@ -319,7 +311,7 @@
 						<div
 							class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10"
 						>
-							<span class="material-symbols-outlined text-primary">handshake</span>
+							<Handshake class="text-primary" />
 						</div>
 						<div>
 							<h4 class="mb-2 font-headline-md text-headline-md">
@@ -339,32 +331,15 @@
 	<section
 		class="relative overflow-hidden bg-primary py-section-gap-mobile text-on-primary md:py-section-gap-desktop"
 	>
-		<div class="pointer-events-none absolute top-0 right-0 opacity-10">
-			<span class="material-symbols-outlined text-[400px]">format_quote</span>
-		</div>
+		<div class="pointer-events-none absolute top-0 right-0 opacity-10">""</div>
 		<div class="relative z-10 mx-auto max-w-7xl px-grid-margin">
 			<div class="max-w-3xl">
 				<div class="mb-8 flex gap-1">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p
 					class="mb-12 font-display-lg text-display-lg-mobile leading-tight italic md:text-display-lg"
@@ -398,7 +373,7 @@
 					class="flex h-14 items-center justify-center gap-2 bg-primary px-10 font-label-caps text-label-caps font-bold text-on-primary transition-all hover:opacity-90 active:scale-95"
 					href="tel:3609917646"
 				>
-					<span class="material-symbols-outlined">call</span> CALL (360) 991-7646
+					<Phone /> CALL (360) 991-7646
 				</a>
 				<a
 					href="/contact"

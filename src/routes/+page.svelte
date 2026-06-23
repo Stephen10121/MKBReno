@@ -4,6 +4,16 @@
 	import bathroomImg from '@/assets/bathroom.webp';
 	import houseReno from '@/assets/housereno.webp';
 	import vancouverReno from '@/assets/vancouverreno.webp';
+	import {
+		ArrowRight,
+		BadgeCheck,
+		BrainCog,
+		CircleCheck,
+		DraftingCompass,
+		MapPin,
+		Phone,
+		Star
+	} from '@lucide/svelte';
 </script>
 
 <svelte:head>
@@ -34,7 +44,12 @@
 	<!-- Hero Section -->
 	<section class="overlow-hidden relative flex min-h-screen items-center">
 		<div class="absolute inset-0 z-0">
-			<img class="h-full w-full object-cover" alt="Hero home page" src={heroImg} />
+			<img
+				class="h-full w-full object-cover"
+				alt="Hero home page"
+				src={heroImg}
+				fetchpriority="high"
+			/>
 			<div class="noise absolute inset-0 bg-linear-to-r from-black/60 to-transparent"></div>
 		</div>
 		<div class="relative z-10 mx-auto w-full max-w-7xl px-grid-margin">
@@ -96,9 +111,7 @@
 					<div
 						class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary-container/10 transition-transform group-hover:scale-110"
 					>
-						<span class="material-symbols-outlined text-3xl text-primary"
-							>architecture</span
-						>
+						<DraftingCompass class="text-3xl text-primary" />
 					</div>
 					<h3 class="mb-4 font-headline-md text-headline-md">Elite Craftsmanship</h3>
 					<p class="leading-relaxed text-on-surface-variant">
@@ -113,8 +126,7 @@
 					<div
 						class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary-container/10 transition-transform group-hover:scale-110"
 					>
-						<span class="material-symbols-outlined text-3xl text-primary">verified</span
-						>
+						<BadgeCheck class="text-3xl text-primary" />
 					</div>
 					<h3 class="mb-4 font-headline-md text-headline-md">Transparent Process</h3>
 					<p class="leading-relaxed text-on-surface-variant">
@@ -129,9 +141,7 @@
 					<div
 						class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary-container/10 transition-transform group-hover:scale-110"
 					>
-						<span class="material-symbols-outlined text-3xl text-primary"
-							>psychology</span
-						>
+						<BrainCog class="text-3xl text-primary" />
 					</div>
 					<h3 class="mb-4 font-headline-md text-headline-md">Uplifting Design</h3>
 					<p class="leading-relaxed text-on-surface-variant">
@@ -184,19 +194,13 @@
 						</p>
 						<ul class="flex flex-wrap gap-4 font-label-caps text-label-caps">
 							<li class="flex items-center gap-1">
-								<span class="material-symbols-outlined text-sm text-primary-fixed"
-									>check_circle</span
-								> Custom Cabinetry
+								<CircleCheck class="text-sm text-primary-fixed" /> Custom Cabinetry
 							</li>
 							<li class="flex items-center gap-1">
-								<span class="material-symbols-outlined text-sm text-primary-fixed"
-									>check_circle</span
-								> Pro Appliances
+								<CircleCheck class="text-sm text-primary-fixed" /> Pro Appliances
 							</li>
 							<li class="flex items-center gap-1">
-								<span class="material-symbols-outlined text-sm text-primary-fixed"
-									>check_circle</span
-								> Smart Lighting
+								<CircleCheck class="text-sm text-primary-fixed" /> Smart Lighting
 							</li>
 						</ul>
 					</div>
@@ -222,7 +226,7 @@
 						<a
 							href="/services#bathroom"
 							class="rounded-lg bg-white px-6 py-2 text-sm font-bold text-primary"
-							>Learn More</a
+							>Bathroom remodeling services</a
 						>
 					</div>
 				</div>
@@ -318,10 +322,7 @@
 			<p class="mb-16 text-secondary">Real experiences from homeowners in our community.</p>
 			<div class="mx-auto max-w-4xl">
 				<div class="relative rounded-3xl border border-gray-subtle bg-surface p-12 md:p-20">
-					<span
-						class="material-symbols-outlined absolute top-8 left-8 text-7xl text-primary/20"
-						>format_quote</span
-					>
+					<span class="absolute top-8 left-8 text-7xl text-primary/20">""</span>
 					<p
 						class="mb-8 font-headline-md text-2xl leading-relaxed text-on-surface italic md:text-3xl"
 					>
@@ -338,26 +339,11 @@
 							BATHROOM RENOVATION • VANCOUVER, WA
 						</p>
 						<div class="mt-4 flex gap-1 text-primary">
-							<span
-								class="material-symbols-outlined"
-								style="font-variation-settings: 'FILL' 1;">star</span
-							>
-							<span
-								class="material-symbols-outlined"
-								style="font-variation-settings: 'FILL' 1;">star</span
-							>
-							<span
-								class="material-symbols-outlined"
-								style="font-variation-settings: 'FILL' 1;">star</span
-							>
-							<span
-								class="material-symbols-outlined"
-								style="font-variation-settings: 'FILL' 1;">star</span
-							>
-							<span
-								class="material-symbols-outlined"
-								style="font-variation-settings: 'FILL' 1;">star</span
-							>
+							<Star class="text-primary" />
+							<Star class="text-primary" />
+							<Star class="text-primary" />
+							<Star class="text-primary" />
+							<Star class="text-primary" />
 						</div>
 					</div>
 				</div>
@@ -391,7 +377,7 @@
 						class="flex items-center justify-center gap-3 rounded-lg border border-white/30 px-10 py-5 text-sm font-bold text-white transition-all hover:bg-white/10 md:text-xl"
 						href="tel:3609917646"
 					>
-						<span class="material-symbols-outlined">call</span>
+						<Phone />
 						(360) 991-7646
 					</a>
 				</div>
@@ -413,7 +399,7 @@
 				</div>
 				<div class="mx-8 hidden h-px grow bg-outline-variant/30 md:block"></div>
 				<div class="mt-2 flex items-center gap-2 font-bold text-primary">
-					<span class="material-symbols-outlined">location_on</span>
+					<MapPin />
 					<span>Pacific Northwest</span>
 				</div>
 			</div>
@@ -425,10 +411,9 @@
 					<h3 class="mb-2 text-lg font-bold text-on-surface">Battle Ground, WA</h3>
 					<div class="flex items-center gap-1 text-sm font-bold text-primary">
 						<span>View Services</span>
-						<span
-							class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1"
-							>arrow_forward</span
-						>
+						<ArrowRight
+							class="text-sm transition-transform group-hover:translate-x-1"
+						/>
 					</div>
 				</a>
 				<a
@@ -438,10 +423,9 @@
 					<h3 class="mb-2 text-lg font-bold text-on-surface">Vancouver, WA</h3>
 					<div class="flex items-center gap-1 text-sm font-bold text-primary">
 						<span>View Services</span>
-						<span
-							class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1"
-							>arrow_forward</span
-						>
+						<ArrowRight
+							class="text-sm transition-transform group-hover:translate-x-1"
+						/>
 					</div>
 				</a>
 				<a
@@ -451,10 +435,9 @@
 					<h3 class="mb-2 text-lg font-bold text-on-surface">Washougal, WA</h3>
 					<div class="flex items-center gap-1 text-sm font-bold text-primary">
 						<span>View Services</span>
-						<span
-							class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1"
-							>arrow_forward</span
-						>
+						<ArrowRight
+							class="text-sm transition-transform group-hover:translate-x-1"
+						/>
 					</div>
 				</a>
 				<a
@@ -464,24 +447,12 @@
 					<h3 class="mb-2 text-lg font-bold text-on-surface">Camas, WA</h3>
 					<div class="flex items-center gap-1 text-sm font-bold text-primary">
 						<span>View Services</span>
-						<span
-							class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1"
-							>arrow_forward</span
-						>
+						<ArrowRight
+							class="text-sm transition-transform group-hover:translate-x-1"
+						/>
 					</div>
 				</a>
 			</div>
 		</div>
 	</section>
 </main>
-
-<style>
-	.material-symbols-outlined {
-		font-variation-settings:
-			'FILL' 0,
-			'wght' 400,
-			'GRAD' 0,
-			'opsz' 24;
-		vertical-align: middle;
-	}
-</style>

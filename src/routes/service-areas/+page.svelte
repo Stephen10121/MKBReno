@@ -1,6 +1,19 @@
 <script lang="ts">
 	import pnw from '@/assets/pnw.webp';
 	import servingHere from '@/assets/servinghere.webp';
+	import {
+		ArrowRight,
+		BadgeCheck,
+		Hammer,
+		House,
+		MapPin,
+		Mountain,
+		Phone,
+		Star,
+		Tractor,
+		Users,
+		Waves
+	} from '@lucide/svelte';
 </script>
 
 <svelte:head>
@@ -39,7 +52,7 @@
 				</p>
 				<div class="flex flex-wrap gap-4">
 					<div class="flex items-center gap-2 font-bold text-primary">
-						<span class="material-symbols-outlined">location_on</span>
+						<MapPin />
 						<span>Pacific Northwest</span>
 					</div>
 				</div>
@@ -61,7 +74,7 @@
 					<div
 						class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-fixed/20 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
 					>
-						<span class="material-symbols-outlined">foundation</span>
+						<House />
 					</div>
 					<h3 class="mb-3 font-headline-md text-headline-md">Vancouver, WA</h3>
 					<p class="mb-6 text-secondary">
@@ -73,7 +86,7 @@
 						href="/service-areas/vancouver"
 					>
 						See Local Projects
-						<span class="material-symbols-outlined text-sm">arrow_forward</span>
+						<ArrowRight class="text-sm" />
 					</a>
 				</div>
 				<!-- City: Camas -->
@@ -83,7 +96,7 @@
 					<div
 						class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-fixed/20 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
 					>
-						<span class="material-symbols-outlined">landscape</span>
+						<Mountain />
 					</div>
 					<h3 class="mb-3 font-headline-md text-headline-md">Camas, WA</h3>
 					<p class="mb-6 text-secondary">
@@ -95,7 +108,7 @@
 						href="/service-areas/camas"
 					>
 						View City Page
-						<span class="material-symbols-outlined text-sm">arrow_forward</span>
+						<ArrowRight class="text-sm" />
 					</a>
 				</div>
 				<!-- City: Battle Ground -->
@@ -105,7 +118,7 @@
 					<div
 						class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-fixed/20 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
 					>
-						<span class="material-symbols-outlined">house</span>
+						<Tractor />
 					</div>
 					<h3 class="mb-3 font-headline-md text-headline-md">Battle Ground, WA</h3>
 					<p class="mb-6 text-secondary">
@@ -117,7 +130,7 @@
 						href="/service-areas/battle-ground"
 					>
 						See Local Projects
-						<span class="material-symbols-outlined text-sm">arrow_forward</span>
+						<ArrowRight class="text-sm" />
 					</a>
 				</div>
 				<!-- City: Washougal -->
@@ -127,7 +140,7 @@
 					<div
 						class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-fixed/20 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
 					>
-						<span class="material-symbols-outlined">waves</span>
+						<Waves />
 					</div>
 					<h3 class="mb-3 font-headline-md text-headline-md">Washougal, WA</h3>
 					<p class="mb-6 text-secondary">
@@ -139,7 +152,7 @@
 						href="/service-areas/washougal"
 					>
 						View City Page
-						<span class="material-symbols-outlined text-sm">arrow_forward</span>
+						<ArrowRight class="text-sm" />
 					</a>
 				</div>
 			</div>
@@ -162,10 +175,7 @@
 							class="absolute top-4 left-4 rounded-lg border border-gray-subtle bg-surface-white/90 p-4 shadow-md backdrop-blur-sm"
 						>
 							<div class="flex items-center gap-2 font-bold text-primary">
-								<span
-									class="material-symbols-outlined"
-									style="font-variation-settings: 'FILL' 1;">stars</span
-								>
+								<Star class="h-4 w-4" />
 								<span class="font-label-caps text-label-caps">LOCAL HUB</span>
 							</div>
 							<p class="mt-1 text-[10px] text-secondary">
@@ -181,10 +191,7 @@
 					<div class="space-y-8">
 						<div class="flex gap-4">
 							<div class="shrink-0 text-primary">
-								<span
-									class="material-symbols-outlined"
-									style="font-variation-settings: 'opsz' 40;">verified</span
-								>
+								<BadgeCheck />
 							</div>
 							<div>
 								<h4 class="mb-1 font-bold">PNW Building Code Expertise</h4>
@@ -197,10 +204,7 @@
 						</div>
 						<div class="flex gap-4">
 							<div class="shrink-0 text-primary">
-								<span
-									class="material-symbols-outlined"
-									style="font-variation-settings: 'opsz' 40;">diversity_3</span
-								>
+								<Users />
 							</div>
 							<div>
 								<h4 class="mb-1 font-bold">Community-First Approach</h4>
@@ -213,10 +217,7 @@
 						</div>
 						<div class="flex gap-4">
 							<div class="shrink-0 text-primary">
-								<span
-									class="material-symbols-outlined"
-									style="font-variation-settings: 'opsz' 40;">construction</span
-								>
+								<Hammer />
 							</div>
 							<div>
 								<h4 class="mb-1 font-bold">Local Resource Network</h4>
@@ -251,8 +252,8 @@
 				</a>
 			</div>
 			<div class="mt-8 flex items-center justify-center gap-4 text-sm opacity-80">
-				<span class="flex items-center gap-1">
-					<span class="material-symbols-outlined text-sm">call</span>
+				<span class="flex items-center gap-1 text-sm">
+					<Phone />
 					(360) 991-7646
 				</span>
 				<span class="h-1 w-1 rounded-full bg-on-primary"></span>
@@ -261,13 +262,3 @@
 		</div>
 	</section>
 </main>
-
-<style>
-	.material-symbols-outlined {
-		font-variation-settings:
-			'FILL' 0,
-			'wght' 400,
-			'GRAD' 0,
-			'opsz' 24;
-	}
-</style>
