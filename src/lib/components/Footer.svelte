@@ -140,7 +140,7 @@
 	<div
 		class="mx-auto mt-16 max-w-7xl border-t border-outline-variant/30 px-grid-margin pt-8 text-center"
 	>
-		<p class="font-label-caps text-label-caps text-on-surface-variant/70">
+		<p class="text-label- font-label-caps">
 			© {new Date().getFullYear()} MKB Renovations. Licensed &amp; Insured. Serving Vancouver, WA
 			&amp; surrounding areas. Phone: (360) 991-7646.
 		</p>

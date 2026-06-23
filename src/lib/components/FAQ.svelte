@@ -22,9 +22,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							What makes MKB Renovations different from other contractors?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -43,9 +43,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							Do you offer free estimates?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -64,7 +64,7 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">What areas do you serve?</h4>
+						<p class="text-lg font-bold text-on-surface">What areas do you serve?</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -92,9 +92,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							What types of renovations do you specialize in?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -119,9 +119,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							How long do renovation projects typically take?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -139,9 +139,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							What is your design philosophy?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -159,9 +159,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							Are you licensed and insured?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -179,9 +179,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							Can I see examples of your past work?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -200,9 +200,9 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">
+						<p class="text-lg font-bold text-on-surface">
 							How do clients feel about your work?
-						</h4>
+						</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>
@@ -223,7 +223,7 @@
 					class="group overflow-hidden rounded-xl border border-gray-subtle bg-white transition-all duration-300"
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
-						<h4 class="text-lg font-bold text-on-surface">How do I get started?</h4>
+						<p class="text-lg font-bold text-on-surface">How do I get started?</p>
 						<ChevronDown
 							class="transition-transform duration-300 group-open:rotate-180"
 						/>

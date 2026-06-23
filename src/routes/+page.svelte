@@ -334,7 +334,7 @@
 						>
 							<span class="text-xl font-bold text-primary">S</span>
 						</div>
-						<h4 class="text-lg font-bold">Sam Pilat</h4>
+						<p class="text-lg font-bold">Sam Pilat</p>
 						<p class="font-label-caps text-label-caps text-secondary">
 							BATHROOM RENOVATION • VANCOUVER, WA
 						</p>
