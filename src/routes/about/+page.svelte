@@ -2,6 +2,7 @@
 	import MarkImage from '$lib/assets/mark.webp';
 	import kitchenIMG from '@/assets/Hero.webp';
 	import renovationIMG from '@/assets/housereno.webp';
+	import { BadgeCheck, DraftingCompass, Eye, Heart, Phone } from '@lucide/svelte';
 </script>
 
 <svelte:head>
@@ -61,7 +62,7 @@
 							your vision and quality standards.
 						</p>
 						<div class="flex items-center gap-4 font-bold text-primary">
-							<span class="material-symbols-outlined">verified</span>
+							<BadgeCheck />
 							<span>Licensed, Insured, &amp; Locally Operated</span>
 						</div>
 					</div>
@@ -140,7 +141,7 @@
 				<div
 					class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
 				>
-					<span class="material-symbols-outlined">architecture</span>
+					<DraftingCompass />
 				</div>
 				<h3 class="mb-3 font-headline-md text-headline-md">Craftsmanship</h3>
 				<p class="text-secondary">
@@ -155,7 +156,7 @@
 				<div
 					class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
 				>
-					<span class="material-symbols-outlined">visibility</span>
+					<Eye />
 				</div>
 				<h3 class="mb-3 font-headline-md text-headline-md">Integrity</h3>
 				<p class="text-secondary">
@@ -170,7 +171,7 @@
 				<div
 					class="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white"
 				>
-					<span class="material-symbols-outlined">volunteer_activism</span>
+					<Heart />
 				</div>
 				<h3 class="mb-3 font-headline-md text-headline-md">Client-First</h3>
 				<p class="text-secondary">
@@ -208,7 +209,7 @@
 					class="flex items-center justify-center gap-2 rounded-lg border border-on-primary px-10 py-5 text-label-caps font-bold text-on-primary transition-colors hover:bg-on-primary hover:text-primary"
 					href="tel:3609917646"
 				>
-					<span class="material-symbols-outlined">call</span>
+					<Phone class="text-sm" />
 					(360) 991-7646
 				</a>
 			</div>
@@ -217,13 +218,6 @@
 </main>
 
 <style>
-	.material-symbols-outlined {
-		font-variation-settings:
-			'FILL' 0,
-			'wght' 400,
-			'GRAD' 0,
-			'opsz' 24;
-	}
 	.text-label-caps {
 		text-transform: uppercase;
 	}

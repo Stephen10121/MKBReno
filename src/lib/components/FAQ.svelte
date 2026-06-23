@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { ChevronDown } from '@lucide/svelte';
+</script>
+
 <section class="bg-surface py-section-gap-mobile md:py-section-gap-desktop" id="#faq">
 	<div
 		class="mx-auto max-w-7xl translate-y-0 px-grid-margin opacity-100 transition-all duration-1000"
@@ -21,10 +25,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							What makes MKB Renovations different from other contractors?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -43,10 +46,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							Do you offer free estimates?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -63,10 +65,9 @@
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
 						<h4 class="text-lg font-bold text-on-surface">What areas do you serve?</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -94,10 +95,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							What types of renovations do you specialize in?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -122,10 +122,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							How long do renovation projects typically take?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -143,10 +142,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							What is your design philosophy?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -164,10 +162,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							Are you licensed and insured?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -185,10 +182,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							Can I see examples of your past work?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -207,10 +203,9 @@
 						<h4 class="text-lg font-bold text-on-surface">
 							How do clients feel about your work?
 						</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">
@@ -229,10 +224,9 @@
 				>
 					<summary class="flex cursor-pointer list-none items-center justify-between p-6">
 						<h4 class="text-lg font-bold text-on-surface">How do I get started?</h4>
-						<span
-							class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180"
-							>expand_more</span
-						>
+						<ChevronDown
+							class="transition-transform duration-300 group-open:rotate-180"
+						/>
 					</summary>
 					<div class="px-6 pb-6">
 						<p class="leading-relaxed text-on-surface-variant">

@@ -5,6 +5,7 @@
 	import { toast } from 'svelte-sonner';
 	import pnw from '@/assets/pnw.webp';
 	import { onMount } from 'svelte';
+	import { BadgeCheck, Clock, MapPin, Phone } from '@lucide/svelte';
 
 	let { data } = $props();
 	let token = $state('');
@@ -77,7 +78,7 @@
 						class="flex items-center gap-3 font-headline-md text-headline-md text-primary-fixed decoration-2 underline-offset-4 hover:underline"
 						href="tel:3609917646"
 					>
-						<span class="material-symbols-outlined text-3xl">call</span>
+						<Phone class="text-3xl" />
 						(360) 991-7646
 					</a>
 				</div>
@@ -241,10 +242,9 @@
 						<h3 class="mb-6 font-headline-md text-headline-md">Our Contact Info</h3>
 						<div class="space-y-6">
 							<div class="flex items-start gap-4">
-								<span
-									class="material-symbols-outlined rounded-lg bg-primary-fixed/30 p-2 text-primary"
-									>location_on</span
-								>
+								<MapPin
+									class="h-10 w-10 rounded-lg bg-primary-fixed/30 p-3 text-primary"
+								/>
 								<div>
 									<p class="font-bold text-on-surface">Service Area</p>
 									<p class="text-secondary">
@@ -253,10 +253,9 @@
 								</div>
 							</div>
 							<div class="flex items-start gap-4">
-								<span
-									class="material-symbols-outlined rounded-lg bg-primary-fixed/30 p-2 text-primary"
-									>schedule</span
-								>
+								<Clock
+									class="h-10 w-10 rounded-lg bg-primary-fixed/30 p-3 text-primary"
+								/>
 								<div>
 									<p class="font-bold text-on-surface">Business Hours</p>
 									<p class="text-secondary">
@@ -265,10 +264,9 @@
 								</div>
 							</div>
 							<div class="flex items-start gap-4">
-								<span
-									class="material-symbols-outlined rounded-lg bg-primary-fixed/30 p-2 text-primary"
-									>verified</span
-								>
+								<BadgeCheck
+									class="h-10 w-14 rounded-lg bg-primary-fixed/30 p-3 text-primary"
+								/>
 								<div>
 									<p class="font-bold text-on-surface">Licensed &amp; Insured</p>
 									<p class="text-secondary">

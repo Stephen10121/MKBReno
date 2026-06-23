@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from '@/assets/mkblogo2.png';
+	import logo from '@/assets/mkblogo2.webp';
 	import { Menu, Phone, X } from '@lucide/svelte';
 	import { AnimatePresence, Motion } from 'svelte-motion';
 

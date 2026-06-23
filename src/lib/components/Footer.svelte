@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Award, Phone, Share2 } from '@lucide/svelte';
-	import logo from '@/assets/mkblogo2.png';
+	import logo from '@/assets/mkblogo2.webp';
 </script>
 
 <footer

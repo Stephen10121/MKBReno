@@ -1,3 +1,7 @@
+<script>
+	import { Star } from '@lucide/svelte';
+</script>
+
 <svelte:head>
 	<title>Testimonials - MKB Renovations</title>
 	<meta name="title" content="Testimonials - MKB Renovations" />
@@ -32,26 +36,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Mark was a great person to work with to remodel our kitchen! The attention to
@@ -78,26 +67,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Mark and team are amazing! I highly recommend them. He remodeled my bathroom
@@ -124,26 +98,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"We are very pleased with the two bathrooms that Mark and his team did for us.
@@ -170,26 +129,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Our family was in need of a reliable and honest contractor to finish our home
@@ -216,26 +160,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"We recently had a concrete patio installed, deck replacement, and a small fence
@@ -262,26 +191,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Remodels could be a really huge headache but at the end they are really
@@ -308,26 +222,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Mark helped us with our home remodel. He is very personable, knowledgeable, and
@@ -354,26 +253,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Very satisfied with the work!! We love our new bathroom and appreciate the
@@ -398,26 +282,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Mark is skilled, professional, understanding and kind. It's rare to find a
@@ -443,26 +312,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Great workmanship done by amazing people. We had a specific vision for our home
@@ -488,26 +342,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Mark does great work with kitchen and bathroom remodeling. He is very reliable
@@ -533,26 +372,11 @@
 				class="testimonial-card rounded-lg border border-gray-subtle bg-surface-white p-8 transition-all duration-300 hover:shadow-[0px_12px_24px_rgba(0,0,0,0.04)]"
 			>
 				<div class="mb-4 flex gap-1 text-primary">
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
-					<span
-						class="material-symbols-outlined"
-						style="font-variation-settings: 'FILL' 1;">star</span
-					>
+					<Star />
+					<Star />
+					<Star />
+					<Star />
+					<Star />
 				</div>
 				<p class="mb-6 text-body-md leading-relaxed text-on-surface italic">
 					"Mark and team were on time, clear on the cost and did great, quality work. The
@@ -604,13 +428,6 @@
 </main>
 
 <style>
-	.material-symbols-outlined {
-		font-variation-settings:
-			'FILL' 0,
-			'wght' 400,
-			'GRAD' 0,
-			'opsz' 24;
-	}
 	.testimonial-masonry {
 		columns: 1;
 		column-gap: 24px;
